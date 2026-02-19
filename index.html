@@ -26,6 +26,10 @@
                 <li><a onclick="navigate('services')" class="nav-link" data-target="services">Servicios</a></li>
                 <li><a onclick="navigate('booking')" class="nav-link" data-target="booking">Turnos</a></li>
                 <li><a onclick="navigate('multimedia')" class="nav-link" data-target="multimedia">Multimedia</a></li>
+                <li><a onclick="navigate('git')" class="nav-link" data-target="git">G.I.T.</a></li>
+                <li><a onclick="navigate('vts')" class="nav-link" data-target="vts">VTS</a></li>
+                <li><a onclick="navigate('news')" class="nav-link" data-target="news">Novedades</a></li>
+                <li><a onclick="navigate('training')" class="nav-link" data-target="training">Capacitaciones</a></li>
                 <li><a onclick="navigate('about')" class="nav-link" data-target="about">Nosotros</a></li>
                 <li><a onclick="navigate('contact')" class="nav-link" data-target="contact">Contacto</a></li>
             </ul>
@@ -161,7 +165,6 @@
 
         <section id="multimedia" class="view-container section-padding">
             <h2 class="section-title">Multimedia</h2>
-            
             <div class="gallery-filters" id="filters-container">
                 <button class="filter-btn active" onclick="filterGallery('todos', this)">Todos los Álbumes</button>
                 <button class="filter-btn" onclick="filterGallery('Alternadores', this)">Alternadores</button>
@@ -174,21 +177,286 @@
                 <button class="filter-btn" onclick="filterGallery('Mecanica General', this)">Mecánica Ligera</button>
                 <button class="filter-btn" onclick="filterGallery('Nosotros', this)">Nosotros</button>
             </div>
+            <div id="gallery-grid" class="gallery-grid"></div>
+        </section>
 
-            <div id="gallery-grid" class="gallery-grid">
+<!-- ================= GIT ================= -->
+        <section id="git" class="view-container section-padding">
+            <h2 class="section-title">G.I.T. (Gestión Integral de Taller)</h2>
+            
+            <div class="about-flex" style="max-width: 1100px; margin: 0 auto;">
+                
+                <div class="about-section vts-highlight" style="margin-bottom: 40px;">
+                    <h3>La Tecnología como Garantía de Seguridad</h3>
+                    <p>
+                        En la industria aeronáutica, la trazabilidad absoluta de cada componente es lo que garantiza la seguridad operacional. 
+                        Basado en esa premisa, desarrollamos <strong>G.I.T.</strong>, un software diseñado para trasladar esa rigurosidad al taller automotriz. 
+                        Tener un software con estas especificaciones elimina la improvisación: cada decisión mecánica queda respaldada por datos precisos y un historial inalterable.
+                    </p>
                 </div>
+
+                <div class="services-container">
+                    
+                    <div class="category-block">
+                        <div class="category-header">
+                            <i class="fas fa-microchip"></i>
+                            <h3>Núcleo Operativo (OT)</h3>
+                        </div>
+                        <ul class="service-list">
+                            <li>Generación automática de códigos de Orden de Trabajo.</li>
+                            <li>Creación automática de carpetas de archivos por cada OT.</li>
+                            <li>Registro permanente de trabajos, observaciones y estados.</li>
+                            <li>Asociación directa entre Cliente y Vehículo para trazabilidad.</li>
+                        </ul>
+                    </div>
+
+                    <div class="category-block">
+                        <div class="category-header">
+                            <i class="fas fa-database"></i>
+                            <h3>Gestión de Activos</h3>
+                        </div>
+                        <ul class="service-list">
+                            <li>Módulo de Vehículos con historial completo de intervenciones.</li>
+                            <li>Libro de Actas Digital para auditorías y control histórico.</li>
+                            <li>Ingreso Rápido: alta de cliente, móvil y OT en un solo flujo.</li>
+                            <li>Bases de datos locales (SQLite) para máxima velocidad sin internet.</li>
+                        </ul>
+                    </div>
+
+                    <div class="category-block">
+                        <div class="category-header">
+                            <i class="fas fa-boxes"></i>
+                            <h3>Infraestructura</h3>
+                        </div>
+                        <ul class="service-list">
+                            <li>Inventario detallado de insumos, repuestos y herramientas.</li>
+                            <li>Administración de sucursales con datos técnicos, fiscales y ubicación.</li>
+                            <li>Control económico: presupuestos, pagos y saldos pendientes.</li>
+                            <li>Sistema de Backups periódicos para resguardo de información crítica.</li>
+                        </ul>
+                    </div>
+
+                </div>
+
+                <div class="software-showcase" style="margin-top: 60px;">
+                    <h3 style="text-align: center; margin-bottom: 30px; font-family: 'Montserrat';">Interfaz del Sistema RDS</h3>
+                    <div class="gallery-grid">
+                     
+                        <div class="gallery-item">
+                            <div class="category-badge"></div>
+                            <img src="./assets/multimedia/git/2.webp" alt="Dashboard G.I.T." onclick="abrirLightbox('Software', this.src)">
+                        </div>
+                        
+                        <div class="gallery-item">
+                            <div class="category-badge"></div>
+                            <img src="./assets/multimedia/git/1.webp" alt="Módulo OT G.I.T." onclick="abrirLightbox('Software', this.src)">
+                        </div>
+                        
+                        <div class="gallery-item">
+                            <div class="category-badge"></div>
+                            <img src="./assets/multimedia/git/3.webp" alt="Inventario G.I.T." onclick="abrirLightbox('Software', this.src)">
+                        </div>
+
+                        <div class="gallery-item">
+                            <div class="category-badge"></div>
+                            <img src="./assets/multimedia/git/4.webp" alt="Dashboard G.I.T." onclick="abrirLightbox('Software', this.src)">
+                        </div>
+                        
+                        <div class="gallery-item">
+                            <div class="category-badge"></div>
+                            <img src="./assets/multimedia/git/5.webp" alt="Módulo OT G.I.T." onclick="abrirLightbox('Software', this.src)">
+                        </div>
+                        
+                        <div class="gallery-item">
+                            <div class="category-badge"></div>
+                            <img src="./assets/multimedia/git/6.webp" alt="Inventario G.I.T." onclick="abrirLightbox('Software', this.src)">
+                        </div>
+
+                		<div class="about-section vts-highlight" style="margin-bottom: 40px;">
+                    		<h3>Adquisicion del software</h3>
+                    		<p>
+						Para adquirir el programa ponte en contacto con nostros para conocer el estado de evolucion de la reversion actual
+                    		</p>
+               		</div>
+
+                <div style="text-align: center; margin-top: 40px; font-size: 0.9rem; color: var(--text-muted);">
+                    <p><em>Desarrollado por RDS - Rivas Desarrollo de Software</em></p>
+                </div>
+
+            </div>
         </section>
 
 
+<!-- ================= VTS ================= -->
+        <section id="vts" class="view-container section-padding">
+            <h2 class="section-title">Estándar VTS</h2>
+    
+            <div class="about-flex" style="max-width: 1100px; margin: 0 auto;">
+        
+                <div class="about-section vts-highlight" style="margin-bottom: 40px;">
+                    <h3>No somos un taller. Somos un sistema.</h3>
+                    <p>
+                        La industria automotriz independiente tiene talento y capacidad técnica, pero históricamente ha carecido de una estructura común. 
+                        <strong>VTS (Vehicle Technical Specification)</strong> nace para proponer que el estándar sea el nuevo diferencial. 
+                        No es solo un manual; es un lenguaje común diseñado para que la seguridad no sea un discurso, sino un sistema replicable donde el éxito no depende del individuo, sino del método.
+                    </p>
+                </div>
+
+                <div class="about-grid" style="grid-template-columns: 1fr 1fr; display: grid; gap: 30px; margin-bottom: 50px;">
+                    <div class="about-block">
+                        <h3><i class="fas fa-plane-arrival"></i> Origen Aeroespacial</h3>
+                        <p>
+                            VTS adapta la normativa internacional <strong>ATA 100 / iSpec 2200</strong> de la aviación a la arquitectura vehicular moderna. 
+                            Este sistema organiza cada intervención en una jerarquía de Grupos y Capítulos, permitiendo una trazabilidad absoluta y una reducción drástica del error humano.
+                        </p>
+                    </div>
+                    <div class="about-block">
+                        <h3><i class="fas fa-shield-alt"></i> Gestión del Riesgo (HF)</h3>
+                        <p>
+                            Implementamos el concepto de <strong>Factores Humanos (HF)</strong> y el análisis de la <em>"Sucia Docena"</em> (Dirty Dozen) para gestionar el error en el mantenimiento. 
+                            Cada vehículo liberado bajo estándar VTS cuenta con una certificación de <strong>Release to Service (RTS)</strong>.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="about-section" style="background: #fff; padding: 30px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05);">
+                    <h3 style="text-align: center; margin-bottom: 25px;">Estructura de Configuración VTS</h3>
+                    <div style="overflow-x: auto;">
+                        <table style="width: 100%; border-collapse: collapse; font-size: 0.9rem;">
+                            <thead>
+                                <tr style="background: var(--primary); color: white;">
+                                    <th style="padding: 12px; text-align: left;">Capítulo VTS</th>
+                                    <th style="padding: 12px; text-align: left;">Nombre Sistema</th>
+                                    <th style="padding: 12px; text-align: left;">Aplicación Automotriz</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr style="border-bottom: 1px solid #eee;">
+                                    <td style="padding: 10px;"><strong>VTS 05</strong></td>
+                                    <td>Time Limits</td>
+                                    <td>Gestión de Services, correas y vida útil.</td>
+                                </tr>
+                                <tr style="border-bottom: 1px solid #eee; background: #f9f9f9;">
+                                    <td style="padding: 10px;"><strong>VTS 12</strong></td>
+                                    <td>Servicing</td>
+                                    <td>Fluidos, niveles y limpieza técnica de sistemas.</td>
+                                </tr>
+                                <tr style="border-bottom: 1px solid #eee;">
+                                    <td style="padding: 10px;"><strong>VTS 24</strong></td>
+                                    <td>Electrical Power</td>
+                                    <td>Batería, alternador y gestión de energía.</td>
+                                </tr>
+                                <tr style="border-bottom: 1px solid #eee; background: #f9f9f9;">
+                                    <td style="padding: 10px;"><strong>VTS 45</strong></td>
+                                    <td>Central Diagnostic</td>
+                                    <td>Escaneo de ECUs, análisis de fallas y logbooks.</td>
+                                </tr>
+                                <tr style="border-bottom: 1px solid #eee;">
+                                    <td style="padding: 10px;"><strong>VTS 72</strong></td>
+                                    <td>Engine</td>
+                                    <td>Mecánica interna: bloque, tapa y distribución.</td>
+                                </tr>
+                                <tr style="border-bottom: 1px solid #eee; background: #f9f9f9;">
+                                    <td style="padding: 10px;"><strong>VTS 82</strong></td>
+                                    <td>Transmission</td>
+                                    <td>Cajas de transferencia, diferenciales y ejes.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div style="margin-top: 40px; padding: 20px; border: 1px dashed var(--accent); border-radius: 8px; text-align: center;">
+                    <p style="font-size: 0.85rem; color: var(--text-muted);">
+                        <i class="fas fa-copyright"></i> <strong>Propiedad Intelectual:</strong> El desarrollo, codificación y metodología VTS son propiedad de <strong>Rivas Lucas</strong>. 
+                        Su uso está sujeto a licencias oficiales de Check Service.
+                    </p>
+                </div>
+
+            </div>
+        </section>
+
+<!-- ================= Novedades ================= -->
 
 
+        <section id="news" class="view-container section-padding">
+            <h2 class="section-title">Novedades</h2>
+            <div id="news-container" class="services-container" style="max-width: 900px; margin: 0 auto; display: flex; flex-direction: column; gap: 20px;">
+                    </div>
+        </section>
 
 
+<!-- ================= Capacitaciones ================= -->
+        <section id="training" class="view-container section-padding">
+            <h2 class="section-title">Capacitaciones</h2>
+            
+            <div class="about-flex" style="max-width: 1000px; margin: 0 auto;">
+                
+                <div class="vts-highlight" style="margin-bottom: 40px; border-left: 5px solid var(--accent); background: rgba(255, 152, 0, 0.1); padding: 20px; border-radius: 0 8px 8px 0;">
+                    <p style="font-style: italic; font-weight: 600; color: var(--primary); line-height: 1.6;">
+                        "Check Service se encuentra en desarrollo de las siguientes capacitaciones, las cuales luego de estar el contenido completamente formado se buscará la homologación del curso para ofrecer certificación oficial."
+                    </p>
+                </div>
+
+                <div class="services-container" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px;">
+                    
+                    <div class="category-block" style="background: #fff; border: 1px solid #eee; border-radius: 8px; overflow: hidden; display: flex; flex-direction: column;">
+                        <div class="category-header" style="background: var(--primary); color: white; padding: 15px; display: flex; align-items: center; gap: 10px;">
+                            <i class="fas fa-users-cog"></i>
+                           Factores Humanos</h3>
+                        </div>
+                        <div style="padding: 20px; flex-grow: 1;">
+                            <p style="margin-bottom: 15px;"><strong>Enfoque:</strong> Implementación del modelo aeronáutico de gestión del riesgo y seguridad operacional aplicado al mantenimiento vehicular.</p>
+                            <p><strong>Objetivo:</strong> Profesionalizar la gestión del equipo de trabajo, reduciendo incidentes críticos y elevando el estándar de seguridad mediante la cultura del error responsable.</p>
+                        </div>
+                    </div>
+
+                    <div class="category-block" style="background: #fff; border: 1px solid #eee; border-radius: 8px; overflow: hidden; display: flex; flex-direction: column;">
+                        <div class="category-header" style="background: var(--primary); color: white; padding: 15px; display: flex; align-items: center; gap: 10px;">
+                            <i class="fas fa-file-invoice"></i>
+                            Sistema VTS</h3>
+                        </div>
+                        <div style="padding: 20px; flex-grow: 1;">
+                            <p style="margin-bottom: 15px;"><strong>Enfoque:</strong> Adopción del estándar técnico basado en la normativa internacional ATA 100 para la organización y codificación de intervenciones.</p>
+                            <p><strong>Objetivo:</strong> Unificar el lenguaje técnico del taller, permitiendo una trazabilidad absoluta y una estructura de mantenimiento replicable y profesional.</p>
+                        </div>
+                    </div>
+
+                    <div class="category-block" style="background: #fff; border: 1px solid #eee; border-radius: 8px; overflow: hidden; display: flex; flex-direction: column;">
+                        <div class="category-header" style="background: var(--primary); color: white; padding: 15px; display: flex; align-items: center; gap: 10px;">
+                            <i class="fas fa-laptop-code"></i>
+                            Software G.I.T.</h3>
+                        </div>
+                        <div style="padding: 20px; flex-grow: 1;">
+                            <p style="margin-bottom: 15px;"><strong>Enfoque:</strong> Operatividad y administración avanzada mediante el ecosistema digital de gestión desarrollado por RDS.</p>
+                            <p><strong>Objetivo:</strong> Digitalizar integralmente el flujo de trabajo, desde la recepción bajo estándar VTS hasta la certificación final de aptitud (Release to Service).</p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="about-section" style="margin-top: 50px; background: #f9f9f9; border-radius: 12px; padding: 30px; border: 1px solid #eee;">
+                    <h3 style="text-align: center; color: var(--primary); margin-bottom: 25px; font-family: 'Montserrat';">Modalidades de Dictado</h3>
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px;">
+                        <div style="text-align: center; padding: 25px; border: 1px solid #ddd; border-radius: 8px; background: white;">
+                            <i class="fas fa-map-marker-alt" style="font-size: 2.5rem; color: var(--accent); margin-bottom: 15px;"></i>
+                            <h4 style="margin-bottom: 10px;">In Situ</h4>
+                            <p style="font-size: 0.9rem; color: #555;">Capacitación presencial en el taller solicitante, adaptada a su propia infraestructura y equipo técnico.</p>
+                        </div>
+                        <div style="text-align: center; padding: 25px; border: 1px solid #ddd; border-radius: 8px; background: white;">
+                            <i class="fas fa-desktop" style="font-size: 2.5rem; color: var(--accent); margin-bottom: 15px;"></i>
+                            <h4 style="margin-bottom: 10px;">Virtual</h4>
+                            <p style="font-size: 0.9rem; color: #555;">Formación remota mediante plataforma online para técnicos y propietarios de todo el país.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
 
         <section id="about" class="view-container section-padding">
             <h2 class="section-title">Sobre Check Service</h2>
             <div class="about-flex" style="max-width: 1000px; margin: 0 auto;">
-                
                 <div class="about-section">
                     <h3>EL INICIO</h3>
                     <p>Check Service nació de un encuentro casual y una visión compartida. Aunque el proyecto de un taller de alta tecnología ya estaba en los planes de <strong>Lucas Rivas</strong>, la pieza faltante apareció en una charla de calle con <strong>Ezequiel Borgna</strong>. Él, con más de 5 años dedicados exclusivamente a la inyección electrónica, fue el socio ideal para transformar esa visión en una realidad operativa, uniendo la experiencia aeronáutica y el desarrollo de software con la especialización avanzada.</p>
@@ -226,7 +494,6 @@
                         <li><strong>Evolución Constante:</strong> La formación no es una opción, es un requisito para liderar el cambio.</li>
                     </ul>
                 </div>
-
             </div>
         </section>
 
@@ -271,6 +538,7 @@
         <p>© 2026 Check Service | Rivas Desarrollo de Software</p>
     </footer>
 
+    <script src="datos-novedades.js"></script>
     <script src="script.js"></script>
 </body>
 </html>

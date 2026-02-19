@@ -1,7 +1,21 @@
 /**
+ * script.js - Check Service
+ * Gestión Integral del Taller & Estándar VTS
+ * Programación: RDS (Rivas Desarrollo de Software)
+ */
+
+/**
  * CONFIGURACIÓN DE GALERÍA (ARRAY DE OBJETOS)
+ * Mantenido íntegramente con todas tus categorías y rutas.
  */
 const fotosTrabajos = [
+    { src: './assets/multimedia/git/2.webp', categoria: 'Software' },
+    { src: './assets/multimedia/git/1.webp', categoria: 'Software' },
+    { src: './assets/multimedia/git/3.webp', categoria: 'Software' },
+    { src: './assets/multimedia/git/4.webp', categoria: 'Software' },
+    { src: './assets/multimedia/git/5.webp', categoria: 'Software' },
+    { src: './assets/multimedia/git/6.webp', categoria: 'Software' },
+
     { src: './assets/multimedia/alternadores/alt_1.webp', categoria: 'Alternadores' },
     { src: './assets/multimedia/alternadores/8.webp', categoria: 'Alternadores' },
     { src: './assets/multimedia/alternadores/10.webp', categoria: 'Alternadores' },
@@ -167,6 +181,7 @@ let indiceActual = 0;
 
 /**
  * NAVEGACIÓN SPA
+ * Soporta las 10 secciones y cierre automático de menú.
  */
 function navigate(viewId) {
     const views = document.querySelectorAll('.view-container');
@@ -177,6 +192,7 @@ function navigate(viewId) {
         target.classList.add('active');
     }
 
+    // Actualizar estados de los links en el menú
     const links = document.querySelectorAll('.nav-link');
     links.forEach(l => {
         l.classList.remove('active-link');
@@ -185,23 +201,29 @@ function navigate(viewId) {
         }
     });
 
-    document.getElementById('nav-links').classList.remove('show');
+    // Cerrar menú móvil al navegar
+    const navLinks = document.getElementById('nav-links');
+    if (navLinks) navLinks.classList.remove('show');
+    
+    // Scroll al inicio suave
     window.scrollTo({top: 0, behavior: 'smooth'});
 
+    // Carga inicial de galería si entra a multimedia
     if (viewId === 'multimedia') {
         renderGallery('todos');
     }
 }
 
 /**
- * MENÚ MÓVIL
+ * MENÚ MÓVIL (Toggle)
  */
 function toggleMenu() {
-    document.getElementById('nav-links').classList.toggle('show');
+    const navLinks = document.getElementById('nav-links');
+    if (navLinks) navLinks.classList.toggle('show');
 }
 
 /**
- * LÓGICA DE GALERÍA (Muestra portadas o filtros)
+ * LÓGICA DE GALERÍA (RENDERIZADO DINÁMICO)
  */
 function renderGallery(filtro = 'todos') {
     const grid = document.getElementById('gallery-grid');
@@ -209,16 +231,15 @@ function renderGallery(filtro = 'todos') {
     grid.innerHTML = ''; 
 
     if (filtro === 'todos') {
-        // Obtenemos categorías únicas presentes en el array
+        // Portadas por categoría única para vista general
         const categoriasUnicas = [...new Set(fotosTrabajos.map(f => f.categoria))];
         
         categoriasUnicas.forEach(cat => {
-            // Buscamos la primera foto de esa categoría para que sea la portada
             const portada = fotosTrabajos.find(f => f.categoria === cat);
             crearCard(portada, grid, true);
         });
     } else {
-        // Si hay un filtro, mostramos todas las de esa categoría
+        // Todas las fotos de una categoría específica
         const filtradas = fotosTrabajos.filter(f => f.categoria === filtro);
         if (filtradas.length === 0) {
             grid.innerHTML = '<p style="text-align:center; grid-column: 1/-1; padding: 20px;">Próximamente fotos de esta categoría.</p>';
@@ -232,12 +253,11 @@ function crearCard(foto, contenedor, esPortada) {
     const div = document.createElement('div');
     div.className = 'gallery-item';
     
-    // Si es portada, agregamos el texto de la categoría abajo
     const label = esPortada ? `<div class="category-badge">${foto.categoria.toUpperCase()}</div>` : '';
     
     div.innerHTML = `
         ${label}
-        <img src="${foto.src}" alt="Trabajo Check Service" onclick="abrirLightbox('${foto.categoria}', '${foto.src}')">
+        <img src="${foto.src}" alt="Trabajo Check Service" onclick="abrirLightbox('${foto.categoria}', '${foto.src}')" loading="lazy">
     `;
     contenedor.appendChild(div);
 }
@@ -246,22 +266,25 @@ function crearCard(foto, contenedor, esPortada) {
  * LÓGICA DEL VISOR (LIGHTBOX)
  */
 function abrirLightbox(categoria, fotoInicial) {
-    // Filtramos el álbum que queremos recorrer
     albumActual = fotosTrabajos.filter(f => f.categoria === categoria);
-    // Buscamos el índice de la foto donde hicimos clic
     indiceActual = albumActual.findIndex(f => f.src === fotoInicial);
     
-    document.getElementById('lightbox-modal').style.display = 'flex';
-    document.body.style.overflow = 'hidden'; // Bloquear scroll fondo
-    actualizarLightbox();
+    const lightbox = document.getElementById('lightbox-modal');
+    if (lightbox) {
+        lightbox.style.display = 'flex';
+        document.body.style.overflow = 'hidden'; // Bloquear scroll
+        actualizarLightbox();
+    }
 }
 
 function actualizarLightbox() {
     const img = document.getElementById('lightbox-img');
     const caption = document.getElementById('lightbox-caption');
     
-    img.src = albumActual[indiceActual].src;
-    caption.innerText = `${albumActual[indiceActual].categoria.toUpperCase()} (${indiceActual + 1} / ${albumActual.length})`;
+    if (img && albumActual[indiceActual]) {
+        img.src = albumActual[indiceActual].src;
+        caption.innerText = `${albumActual[indiceActual].categoria.toUpperCase()} (${indiceActual + 1} / ${albumActual.length})`;
+    }
 }
 
 function cambiarFoto(dir) {
@@ -272,14 +295,20 @@ function cambiarFoto(dir) {
 }
 
 function cerrarLightbox() {
-    document.getElementById('lightbox-modal').style.display = 'none';
-    document.body.style.overflow = 'auto'; // Habilitar scroll
+    const lightbox = document.getElementById('lightbox-modal');
+    if (lightbox) {
+        lightbox.style.display = 'none';
+        document.body.style.overflow = 'auto'; // Habilitar scroll
+    }
 }
 
+/**
+ * FILTROS DE BOTONES EN MULTIMEDIA
+ */
 function filterGallery(categoria, btn) {
     const btns = document.querySelectorAll('.filter-btn');
     btns.forEach(b => b.classList.remove('active'));
-    btn.classList.add('active');
+    if (btn) btn.classList.add('active');
     renderGallery(categoria);
 }
 
@@ -314,7 +343,103 @@ if (bookingForm) {
     });
 }
 
-// Cerrar con tecla ESC
+/**
+ * EVENTOS TECLADO Y CARGA INICIAL
+ */
 document.addEventListener('keydown', (e) => {
     if (e.key === "Escape") cerrarLightbox();
+    if (document.getElementById('lightbox-modal').style.display === 'flex') {
+        if (e.key === "ArrowRight") cambiarFoto(1);
+        if (e.key === "ArrowLeft") cambiarFoto(-1);
+    }
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+    // Inicializar en Home
+    navigate('home');
+});
+
+
+
+
+
+
+/**
+ * NAVEGACIÓN SPA REFORZADA
+ */
+function navigate(viewId) {
+    const views = document.querySelectorAll('.view-container');
+    views.forEach(v => v.classList.remove('active'));
+
+    const target = document.getElementById(viewId);
+    if (target) {
+        target.classList.add('active');
+        console.log("Cambiando a vista:", viewId); 
+    }
+
+    // LÓGICA ESPECÍFICA PARA NOVEDADES (ID 'news')
+    if (viewId === 'news') {
+        cargarNovedades();
+    }
+
+    // LÓGICA PARA MULTIMEDIA
+    if (viewId === 'multimedia') {
+        if (typeof renderGallery === 'function') {
+            renderGallery('todos');
+        }
+    }
+
+    // Cerrar menú y scroll
+    const navLinks = document.getElementById('nav-links');
+    if (navLinks) navLinks.classList.remove('show');
+    window.scrollTo({top: 0, behavior: 'smooth'});
+}
+
+/**
+ * CARGA DINÁMICA DE NOVEDADES
+ */
+function cargarNovedades() {
+    const container = document.getElementById('news-container');
+    
+    if (!container) return;
+
+    // Verificamos que los datos existan
+    if (typeof novedadesData === 'undefined' || novedadesData.length === 0) {
+        container.innerHTML = "<p style='text-align:center;'>Esperando datos del Logbook...</p>";
+        return;
+    }
+
+    // LIMPIAMOS EL CONTENEDOR ANTES DE EMPEZAR
+    container.innerHTML = ''; 
+
+    /**
+     * LÓGICA DE ORDENAMIENTO (STACK)
+     * Creamos una copia y la invertimos para que el último ID (más reciente) 
+     * sea el primer elemento del array al mapear.
+     */
+    const historialCronologico = [...novedadesData].reverse();
+
+    historialCronologico.forEach(noticia => {
+        const card = document.createElement('div');
+        card.className = 'category-block';
+        card.style.cssText = "background: #fff; border: 1px solid #eee; border-radius: 12px; overflow: hidden; margin-bottom: 25px; display: flex; flex-direction: column; box-shadow: 0 4px 12px rgba(0,0,0,0.08);";
+
+        card.innerHTML = `
+            <div class="category-header" style="background: var(--primary); color: white; padding: 12px 20px; display: flex; justify-content: space-between; align-items: center;">
+                <span style="font-weight: bold; text-transform: uppercase; font-size: 0.85rem; letter-spacing: 1px; color: #ffffff;">${noticia.categoria} | ${noticia.vts}</span>
+                <span style="font-size: 0.8rem; opacity: 0.9; color: #ffffff;">${noticia.fecha}</span>
+            </div>
+            <div style="display: flex; flex-wrap: wrap; align-items: stretch;">
+                <div style="flex: 1; min-width: 300px; padding: 25px;">
+                    <h3 style="margin-top: 0; color: var(--primary); font-family: 'Montserrat'; font-weight: 700; font-size: 1.3rem; margin-bottom: 15px;">${noticia.titulo}</h3>
+                    <p style="color: #444; line-height: 1.7; font-size: 1rem; margin: 0;">${noticia.descripcion}</p>
+                </div>
+                <div style="width: 300px; min-height: 200px; background: url('${noticia.imagen}') center/cover no-repeat; border-left: 1px solid #f0f0f0;">
+                </div>
+            </div>
+        `;
+        container.appendChild(card);
+    });
+
+    console.log("Logbook ordenado: Mostrando primero el ID", historialCronologico[0].id);
+}

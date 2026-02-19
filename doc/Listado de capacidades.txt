@@ -1,0 +1,49 @@
+DIAGNOSTICO
+	Diagnostico computarizado
+	Diagnostico electrico automotriz
+	Prueba de sensores
+	Prueba de actuadores
+	Analisis de señales
+	Analisis de fallas intermitentes
+	Prueba de vacio
+	Medicion de compresion diferencial
+	Inspección de motores
+
+MANTENIMIENTO DE LINEA
+	Cambio de bujias
+	Inyectores
+	Lubricacion
+	Filtros
+	Limpieza cuerpo de aceleracion
+	Lavado de motor
+	Lavado vehiculo
+
+MANTENIMIENTO PREVENTIVO
+	Mantenimiento preventivo general
+	Regulacion de valvulas
+	Puesta a punto
+	Revision y mantenimiento de frenos
+	Servicio de distribucion
+	Inspecciones recomendados por el fabricante
+	
+REPARACIONES MENORES
+	Electricidad automotriz
+	Inyeccion electronica
+	Sistema de encendido
+	Sistema de iluminacion
+	Motores de arranque
+	Alternadores
+	Carburacion
+	Bombas de combustible
+	Tren delantero
+	
+REPARACIONES MAYORES
+	Tapa de cilindro
+	Instalaciones electricas
+	Recorrida de motores
+	
+TRASLADO DE TALLER
+    Diagnostico a domicilio
+    Reparaciones menores
+	Diagnostico previo a compra
+

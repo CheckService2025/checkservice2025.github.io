@@ -27,7 +27,7 @@ body {
 /* --- NAVEGACIÓN (HEADER) --- */
 header {
     background: var(--primary);
-    padding: 15px 5%;
+    padding: 15px 3%; /* Ajustado de 5% a 3% para ganar espacio horizontal */
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -41,10 +41,11 @@ header {
     font-family: 'Montserrat', sans-serif;
     color: var(--accent);
     font-weight: 700;
-    font-size: 1.6rem;
+    font-size: 1.4rem; /* Reducido levemente para dar espacio al menú */
     cursor: pointer;
     text-transform: uppercase;
     letter-spacing: 1px;
+    flex-shrink: 0; /* Evita que el logo se achique */
 }
 
 .logo span {
@@ -54,19 +55,20 @@ header {
 nav ul {
     display: flex;
     list-style: none;
-    gap: 8px;
+    gap: 4px; /* Espacio reducido para acomodar 10 secciones */
 }
 
 nav ul li a {
     color: var(--white);
     text-decoration: none;
-    font-size: 0.85rem;
+    font-size: 0.72rem; /* Tamaño optimizado para 10 ítems */
     font-weight: 600;
     text-transform: uppercase;
     cursor: pointer;
-    padding: 10px 15px;
+    padding: 8px 10px; /* Padding más ajustado */
     border-radius: 4px;
     transition: var(--transition);
+    white-space: nowrap; /* Evita que el texto salte de línea */
 }
 
 nav ul li a:hover, nav ul li a.active-link {
@@ -384,7 +386,7 @@ nav ul li a:hover, nav ul li a.active-link {
 .prev { left: 5%; }
 .next { right: 5%; }
 
-/* --- SECCIÓN: NOSOTROS (AJUSTES VTS) --- */
+/* --- SECCIÓN: NOSOTROS Y ESTILOS DE CONTENIDO --- */
 .about-section h3 {
     color: var(--primary);
     font-family: 'Montserrat';
@@ -397,8 +399,6 @@ nav ul li a:hover, nav ul li a.active-link {
     border-left: 6px solid var(--accent);
     border-radius: 0 8px 8px 0;
 }
-
-/* --- EXTENSIÓN SECCIÓN NOSOTROS --- */
 
 .about-grid {
     display: grid;
@@ -607,12 +607,16 @@ footer p {
 }
 
 /* --- RESPONSIVE (MÓVIL) --- */
-@media (max-width: 768px) {
-
-    .about-grid {
-        grid-template-columns: 1fr;
+@media (max-width: 1100px) {
+    /* Breakpoint intermedio para tablets/laptops pequeñas con menú ancho */
+    nav ul li a {
+        font-size: 0.65rem;
+        padding: 6px 8px;
     }
+}
 
+@media (max-width: 992px) {
+    /* Forzamos el menú móvil un poco antes por la cantidad de ítems */
     header {
         padding: 10px 5%;
     }
@@ -631,10 +635,25 @@ footer p {
         background: var(--secondary);
         padding: 20px;
         box-shadow: 0 10px 10px rgba(0,0,0,0.2);
+        gap: 0;
     }
 
     nav ul.show {
         display: flex;
+    }
+
+    nav ul li a {
+        font-size: 0.9rem;
+        padding: 15px;
+        display: block;
+        border-radius: 0;
+        border-bottom: 1px solid rgba(255,255,255,0.05);
+    }
+}
+
+@media (max-width: 768px) {
+    .about-grid {
+        grid-template-columns: 1fr;
     }
 
     .hero h1 {
@@ -663,4 +682,9 @@ footer p {
         font-size: 2.5rem;
         padding: 10px;
     }
+}
+
+.software-showcase .gallery-item {
+    border: 1px solid #ddd;
+    background: #000; /* Fondo negro por si la captura tiene transparencias */
 }
