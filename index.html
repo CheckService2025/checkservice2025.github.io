@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Check Service | Mecánica y Electrónica Avanzada</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo" onclick="navigate('home')" style="display: flex; align-items: center; gap: 12px;">
+            <img src="./assets/cstransp.png" alt="Check Service Logo" style="height: 45px; width: auto;">
+            <div>Check <span>Service</span></div>
+        </div>
+        
+        <i class="fas fa-bars menu-toggle" onclick="toggleMenu()"></i>
+        
+        <nav>
+            <ul id="nav-links">
+                <li><a onclick="navigate('home')" class="nav-link active-link" data-target="home">Inicio</a></li>
+                <li><a onclick="navigate('services')" class="nav-link" data-target="services">Servicios</a></li>
+                <li><a onclick="navigate('booking')" class="nav-link" data-target="booking">Turnos</a></li>
+                <li><a onclick="navigate('multimedia')" class="nav-link" data-target="multimedia">Multimedia</a></li>
+                <li><a onclick="navigate('about')" class="nav-link" data-target="about">Nosotros</a></li>
+                <li><a onclick="navigate('contact')" class="nav-link" data-target="contact">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="view-container active">
+            <div class="hero">
+                <h1>Check Service</h1>
+                <p>Precisión aeronáutica aplicada a la mecánica automotriz. Elevamos el estándar del mantenimiento vehicular.</p>
+                <div class="hero-btns">
+                    <button class="btn" onclick="navigate('booking')">Solicitar Turno</button>
+                    <button class="btn btn-outline" onclick="navigate('services')">Nuestras Capacidades</button>
+                </div>
+            </div>
+            
+            <div class="features section-padding">
+                <div class="feature-item">
+                    <i class="fas fa-microchip"></i>
+                    <h3>TECNOLOGIA</h3>
+                    <p>Desarrollo de software de Gestión Integral del Taller</p>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-check-double"></i>
+                    <h3>ESTANDAR VTS</h3>
+                    <p>Calidad de inspección derivados de la Industria Aeronáutica.</p>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-shield-alt"></i>
+                    <h3>SEGURIDAD</h3>
+                    <p>Instrumental de medición con calibración trazable INTI/SAC</p>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-user-graduate"></i>
+                    <h3>PROFESIONALIDAD</h3>
+                    <p>Capacitaciones constantes y actualizaciones de nuevas tecnologías</p>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-history"></i>
+                    <h3>EXPERIENCIA</h3>
+                    <p>Más de 5 años en Inyección Electrónica y 10 años en procedimientos aeronáuticos.</p>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-award"></i>
+                    <h3>CALIDAD</h3>
+                    <p>Siguiendo los estándares de calidad del manual de fabricante.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="services" class="view-container section-padding">
+            <h2 class="section-title">Servicios Especializados</h2>
+            <div class="services-container">
+                <div class="category-block">
+                    <div class="category-header"><i class="fas fa-search"></i><h3>Diagnóstico</h3></div>
+                    <ul class="service-list">
+                        <li>Diagnóstico computarizado</li>
+                        <li>Diagnóstico eléctrico automotriz</li>
+                        <li>Prueba de sensores y actuadores</li>
+                        <li>Análisis de señales y fallas intermitentes</li>
+                        <li>Prueba de vacío y compresión diferencial</li>
+                        <li>Inspección de motores</li>
+                    </ul>
+                </div>
+                <div class="category-block">
+                    <div class="category-header"><i class="fas fa-oil-can"></i><h3>Mantenimiento de Línea</h3></div>
+                    <ul class="service-list">
+                        <li>Cambio de bujías e Inyectores</li>
+                        <li>Lubricación y Filtros</li>
+                        <li>Limpieza cuerpo de aceleración</li>
+                        <li>Lavado de motor y vehículo</li>
+                    </ul>
+                </div>
+                <div class="category-block">
+                    <div class="category-header"><i class="fas fa-clipboard-check"></i><h3>Mantenimiento Preventivo</h3></div>
+                    <ul class="service-list">
+                        <li>Regulación de válvulas y Puesta a punto</li>
+                        <li>Mantenimiento de frenos</li>
+                        <li>Servicio de distribución</li>
+                        <li>Inspecciones recomendadas por fabricante</li>
+                    </ul>
+                </div>
+                <div class="category-block">
+                    <div class="category-header"><i class="fas fa-wrench"></i><h3>Reparaciones Menores</h3></div>
+                    <ul class="service-list">
+                        <li>Electricidad e Inyección electrónica</li>
+                        <li>Motores de arranque y Alternadores</li>
+                        <li>Tren delantero</li>
+                    </ul>
+                </div>
+                <div class="category-block">
+                    <div class="category-header"><i class="fas fa-cogs"></i><h3>Reparaciones Mayores</h3></div>
+                    <ul class="service-list">
+                        <li>Tapa de cilindro</li>
+                        <li>Instalaciones eléctricas completas</li>
+                        <li>Recorrida de motores</li>
+                    </ul>
+                </div>
+                <div class="category-block highlight">
+                    <div class="category-header"><i class="fas fa-truck-moving"></i><h3>Traslado de Taller</h3></div>
+                    <ul class="service-list">
+                        <li>Diagnóstico a domicilio</li>
+                        <li>Reparaciones menores in situ</li>
+                        <li>Diagnóstico previo a compra</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="booking" class="view-container section-padding">
+            <h2 class="section-title">Solicitud de Turno</h2>
+            <div class="form-container">
+                <form id="bookingForm">
+                    <div class="form-row">
+                        <div class="form-group"><label>Nombre</label><input type="text" id="b-name" required></div>
+                        <div class="form-group"><label>WhatsApp</label><input type="tel" id="b-tel" required placeholder="Ej: 1151507872"></div>
+                    </div>
+                    <div class="form-group"><label>Vehículo (Marca/Modelo)</label><input type="text" id="b-car" required></div>
+                    <div class="form-group">
+                        <label>Categoría de Interés</label>
+                        <select id="b-service" required>
+                            <option value="Diagnostico">Diagnóstico</option>
+                            <option value="Mantenimiento">Mantenimiento</option>
+                            <option value="Reparacion">Reparaciones</option>
+                            <option value="Traslado">Servicio a Domicilio (Traslado)</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn btn-full">Enviar por WhatsApp</button>
+                </form>
+            </div>
+        </section>
+
+        <section id="multimedia" class="view-container section-padding">
+            <h2 class="section-title">Multimedia</h2>
+            
+            <div class="gallery-filters" id="filters-container">
+                <button class="filter-btn active" onclick="filterGallery('todos', this)">Todos los Álbumes</button>
+                <button class="filter-btn" onclick="filterGallery('Alternadores', this)">Alternadores</button>
+                <button class="filter-btn" onclick="filterGallery('Motor de Arranque', this)">Motor de Arranque</button>
+                <button class="filter-btn" onclick="filterGallery('Inyeccion Electronica', this)">Inyección Electrónica</button>
+                <button class="filter-btn" onclick="filterGallery('Electricidad', this)">Electricidad</button>
+                <button class="filter-btn" onclick="filterGallery('Electronica', this)">Electrónica</button>
+                <button class="filter-btn" onclick="filterGallery('Distribucion', this)">Distribución</button>
+                <button class="filter-btn" onclick="filterGallery('Tapa de Cilindro', this)">Tapa de Cilindro</button>
+                <button class="filter-btn" onclick="filterGallery('Mecanica General', this)">Mecánica Ligera</button>
+                <button class="filter-btn" onclick="filterGallery('Nosotros', this)">Nosotros</button>
+            </div>
+
+            <div id="gallery-grid" class="gallery-grid">
+                </div>
+        </section>
+
+
+
+
+
+
+
+        <section id="about" class="view-container section-padding">
+            <h2 class="section-title">Sobre Check Service</h2>
+            <div class="about-flex" style="max-width: 1000px; margin: 0 auto;">
+                
+                <div class="about-section">
+                    <h3>EL INICIO</h3>
+                    <p>Check Service nació de un encuentro casual y una visión compartida. Aunque el proyecto de un taller de alta tecnología ya estaba en los planes de <strong>Lucas Rivas</strong>, la pieza faltante apareció en una charla de calle con <strong>Ezequiel Borgna</strong>. Él, con más de 5 años dedicados exclusivamente a la inyección electrónica, fue el socio ideal para transformar esa visión en una realidad operativa, uniendo la experiencia aeronáutica y el desarrollo de software con la especialización avanzada.</p>
+                </div>
+
+                <div class="about-section vts-highlight" style="margin-top: 30px;">
+                    <h3>NUESTRA IDENTIDAD</h3>
+                    <p>Desde el primer día, definimos pilares innegociables: la profesionalización total del servicio. En Check Service no es admisible una reparación de cableado con cinta aisladora o empalmes desprolijos. Nuestra autoexigencia nos impone un trabajo metódico basado en estándares de calidad superiores.</p>
+                    <p>Somos pioneros en la creación del estándar <strong>VTS (Vehicle Technical Specification)</strong>. Adaptamos la filosofía aeronáutica (Concepto ATA 100) a la industria automotriz, creando zonas específicas de inspección, métodos precisos y documentación técnica para cada vehículo. No somos un taller común; brindamos las herramientas para profesionalizar el sistema automotor.</p>
+                </div>
+
+                <div class="about-section" style="margin-top: 30px; border-left: 4px solid var(--accent); padding-left: 20px;">
+                    <h3>LO QUE NOS DEFINE</h3>
+                    <p>La experiencia en tareas de campo de Ezequiel, junto con la metodología técnica y aeronáutica de Lucas.</p>
+                </div>
+
+                <div class="about-grid-container" style="display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin-top: 40px;">
+                    <div class="about-section">
+                        <h3>VISION</h3>
+                        <p>Ser el referente regional en la profesionalización del rubro automotriz, eliminando la improvisación mediante la implementación de estándares de calidad. Aspiramos a que el sistema VTS sea el lenguaje universal en los talleres del futuro.</p>
+                    </div>
+                    <div class="about-section">
+                        <h3>MISION</h3>
+                        <p>Brindar soluciones de mecánica y electrónica avanzada con precisión quirúrgica, aplicando metodologías de inspección derivadas de industrias donde el control de calidad es un valor innegociable.</p>
+                    </div>
+                </div>
+
+                <div class="about-section" style="margin-top: 40px;">
+                    <h3>VALORES</h3>
+                    <ul style="list-style: none; padding: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px;">
+                        <li><strong>Integridad Técnica:</strong> Rechazamos reparaciones temporales. Si no cumple con el estándar de seguridad, no sale del taller.</li>
+                        <li><strong>Metodología y Orden:</strong> Entorno organizado y proceso documentado VTS (basado en ATA 100).</li>
+                        <li><strong>Innovación Adaptativa:</strong> Desarrollo de software y electrónica para adelantarnos a las fallas.</li>
+                        <li><strong>Disciplina Aeronáutica:</strong> Rigor, trazabilidad y responsabilidad normativa en cada tornillo.</li>
+                        <li><strong>Evolución Constante:</strong> La formación no es una opción, es un requisito para liderar el cambio.</li>
+                    </ul>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="contact" class="view-container section-padding">
+            <h2 class="section-title">Ubicación y Contacto</h2>
+            <div class="contact-grid">
+                <div class="contact-locations">
+                    <div class="location-card">
+                        <h3><i class="fas fa-tools"></i> Taller Central</h3>
+                        <p>Esteban Merlo 5252, Caseros</p>
+                    </div>
+                    <div class="location-card">
+                        <h3><i class="fas fa-satellite"></i> Taller Satélite</h3>
+                        <p>Dr. Rebizzo 4657, Caseros</p>
+                    </div>
+                </div>
+                <div class="contact-channels">
+                    <div class="channel-item">
+                        <i class="fab fa-whatsapp"></i>
+                        <div><span>WhatsApp</span><p>+54 9 11 5150-7872</p></div>
+                    </div>
+                    <div class="channel-item">
+                        <i class="fas fa-envelope"></i>
+                        <div><span>Email</span><p>servicecheckautomotor@gmail.com</p></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div id="lightbox-modal" class="lightbox">
+        <span class="close-lightbox" onclick="cerrarLightbox()">&times;</span>
+        <button class="nav-btn prev" onclick="cambiarFoto(-1)">&#10094;</button>
+        <div class="lightbox-content">
+            <img id="lightbox-img" src="" alt="Vista ampliada">
+            <div id="lightbox-caption"></div>
+        </div>
+        <button class="nav-btn next" onclick="cambiarFoto(1)">&#10095;</button>
+    </div>
+
+    <footer>
+        <p>© 2026 Check Service | Rivas Desarrollo de Software</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
