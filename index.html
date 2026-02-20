@@ -1,9 +1,13 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Check Service | Mecánica y Electrónica Avanzada</title>
+    <link rel="icon" type="image/png" href="assets/favicon-32x32.png">
     
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -14,7 +18,7 @@
 
     <header>
         <div class="logo" onclick="navigate('home')" style="display: flex; align-items: center; gap: 12px;">
-            <img src="./assets/cstransp.png" alt="Check Service Logo" style="height: 45px; width: auto;">
+            <img src="./assets/cstransp.webp" alt="Check Service Logo" style="height: 45px; width: auto;">
             <div>Check <span>Service</span></div>
         </div>
         
@@ -513,7 +517,9 @@
                 <div class="contact-channels">
                     <div class="channel-item">
                         <i class="fab fa-whatsapp"></i>
-                        <div><span>WhatsApp</span><p>+54 9 11 5150-7872</p></div>
+                        <div><span>WhatsApp</span><p>+54 9 11 5150-7872 (Base)</p></div>
+                        <div><span>WhatsApp</span><p>+54 9 11 5150-7872 (Ezequiel)</p></div>
+                        <div><span>WhatsApp</span><p>+54 9 11 5150-7872 (Lucas)</p></div>
                     </div>
                     <div class="channel-item">
                         <i class="fas fa-envelope"></i>
@@ -536,6 +542,10 @@
 
     <footer>
         <p>© 2026 Check Service | Rivas Desarrollo de Software</p>
+        <div class="contador-container">
+            <span class="label">VISITAS:</span>
+            <span id="contador-interno" class="odometro">000000</span>
+        </div>
     </footer>
 
     <script src="datos-novedades.js"></script>

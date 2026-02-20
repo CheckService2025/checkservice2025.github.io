@@ -180,19 +180,30 @@ let albumActual = [];
 let indiceActual = 0;
 
 /**
- * NAVEGACIÓN SPA
- * Soporta las 10 secciones y cierre automático de menú.
+ * NAVEGACIÓN SPA ACTUALIZADA
+ * Soporta las secciones, cierre automático de menú y telemetría de Google Analytics.
  */
 function navigate(viewId) {
+    // 1. Ocultar todos los contenedores de vista
     const views = document.querySelectorAll('.view-container');
     views.forEach(v => v.classList.remove('active'));
 
+    // 2. Mostrar el contenedor seleccionado
     const target = document.getElementById(viewId);
     if (target) {
         target.classList.add('active');
     }
 
-    // Actualizar estados de los links en el menú
+    // 3. REPORTE A GOOGLE ANALYTICS
+    // Esto le avisa a Google que el usuario cambió de sección
+    if (typeof gtag === 'function') {
+        gtag('event', 'page_view', {
+            page_title: viewId,
+            page_path: '/' + viewId
+        });
+    }
+
+    // 4. Actualizar estados de los links en el menú
     const links = document.querySelectorAll('.nav-link');
     links.forEach(l => {
         l.classList.remove('active-link');
@@ -201,16 +212,18 @@ function navigate(viewId) {
         }
     });
 
-    // Cerrar menú móvil al navegar
+    // 5. Cerrar menú móvil al navegar
     const navLinks = document.getElementById('nav-links');
     if (navLinks) navLinks.classList.remove('show');
     
-    // Scroll al inicio suave
+    // 6. Scroll al inicio suave
     window.scrollTo({top: 0, behavior: 'smooth'});
 
-    // Carga inicial de galería si entra a multimedia
+    // 7. Carga inicial de galería si entra a multimedia
     if (viewId === 'multimedia') {
-        renderGallery('todos');
+        if (typeof renderGallery === 'function') {
+            renderGallery('todos');
+        }
     }
 }
 
@@ -443,3 +456,41 @@ function cargarNovedades() {
 
     console.log("Logbook ordenado: Mostrando primero el ID", historialCronologico[0].id);
 }
+
+// 1. Configuración de tu Firebase (Pegá tu URL aquí)
+const firebaseConfig = {
+    databaseURL: "https://checkservicecounter-default-rtdb.firebaseio.com/" 
+};
+
+// 2. Inicializar Firebase
+if (!firebase.apps.length) {
+    firebase.initializeApp(firebaseConfig);
+}
+const database = firebase.database();
+
+// 3. Función para contar y mostrar visitas
+function gestionarVisitas() {
+    const visitasRef = database.ref('contador_visitas');
+
+    // Usamos una transacción para que si dos personas entran a la vez, el conteo no falle
+    visitasRef.transaction((currentValue) => {
+        return (currentValue || 0) + 1;
+    }, (error, committed, snapshot) => {
+        if (committed) {
+            // El número que viene de la base de datos
+            const totalVisitas = snapshot.val();
+            
+            // Lo formateamos a 6 dígitos (ej: 000125) para que mantenga el estilo de tablero
+            const numeroFormateado = totalVisitas.toString().padStart(6, '0');
+            
+            // Lo inyectamos en el HTML
+            const el = document.getElementById('contador-interno');
+            if (el) {
+                el.innerText = numeroFormateado;
+            }
+        }
+    });
+}
+
+// 4. Ejecutar cuando la página termine de cargar
+window.addEventListener('load', gestionarVisitas);
