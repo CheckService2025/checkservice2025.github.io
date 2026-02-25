@@ -56,5 +56,14 @@ const novedadesData = [
         "titulo": "Intercambio Técnico: Especialización Diesel",
         "descripcion": "Agradecemos la visita del colega Josafat. Su aporte en conocimientos avanzados de Inyección Diesel eleva el estándar de diagnóstico en nuestras sedes.",
         "imagen": "./assets/multimedia/colaboraciones/josa.webp"
+    },
+    {
+        "id": 7,
+        "fecha": "10/02/2026",
+        "categoria": "Colaboracion",
+        "vts": "VTS-24 ECU",
+        "titulo": "Intercambio Técnico: Banqueando ECU en Laboratorio",
+        "descripcion": "Agradecemos a JET SERVICE la puesta a nuestra disposicion del laboratorio de electronica para pruebas sobre la Unidad de Control Electronica.",
+        "imagen": "./assets/multimedia/colaboraciones/jsi.webp"
     }
 ];

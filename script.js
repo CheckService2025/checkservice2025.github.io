@@ -195,7 +195,6 @@ function navigate(viewId) {
     }
 
     // 3. REPORTE A GOOGLE ANALYTICS
-    // Esto le avisa a Google que el usuario cambió de sección
     if (typeof gtag === 'function') {
         gtag('event', 'page_view', {
             page_title: viewId,
@@ -203,27 +202,34 @@ function navigate(viewId) {
         });
     }
 
-    // 4. Actualizar estados de los links en el menú
-    const links = document.querySelectorAll('.nav-link');
+// 4. Actualizar estados de los links en el menú (RECARGADO)
+    const links = document.querySelectorAll('nav ul li a'); // Selector más específico
+    
     links.forEach(l => {
+        // Removemos la clase de TODOS sin importar nada
         l.classList.remove('active-link');
-        if (l.getAttribute('data-target') === viewId) {
+        
+        // Verificamos si este es el link que tiene el atributo que buscamos
+        // Usamos trim() para evitar errores por espacios invisibles en el HTML
+        const targetAttr = l.getAttribute('data-target');
+        if (targetAttr && targetAttr.trim() === viewId) {
             l.classList.add('active-link');
         }
     });
 
     // 5. Cerrar menú móvil al navegar
     const navLinks = document.getElementById('nav-links');
-    if (navLinks) navLinks.classList.remove('show');
-    
+    if (navLinks) {
+        navLinks.classList.remove('active'); // Cambié 'show' por 'active' si usas el estilo estándar de toggle
+        // Si tu CSS usa otra clase para ocultar el menú, asegúrate que coincida aquí
+    }
+
     // 6. Scroll al inicio suave
     window.scrollTo({top: 0, behavior: 'smooth'});
 
     // 7. Carga inicial de galería si entra a multimedia
-    if (viewId === 'multimedia') {
-        if (typeof renderGallery === 'function') {
-            renderGallery('todos');
-        }
+    if (viewId === 'multimedia' && typeof renderGallery === 'function') {
+        renderGallery('todos');
     }
 }
 
