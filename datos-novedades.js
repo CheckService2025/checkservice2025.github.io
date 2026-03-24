@@ -65,5 +65,32 @@ const novedadesData = [
         "titulo": "Intercambio Técnico: Banqueando ECU en Laboratorio",
         "descripcion": "Agradecemos a JET SERVICE la puesta a nuestra disposicion del laboratorio de electronica para pruebas sobre la Unidad de Control Electronica.",
         "imagen": "./assets/multimedia/colaboraciones/jsi.webp"
+    },
+    {
+        "id": 8,
+        "fecha": "05/03/2026",
+        "categoria": "Linea Pesados",
+        "vts": "VTS-24 Electrico",
+        "titulo": "Traslado de taller",
+        "descripcion": "Gracias al convenio de acciones conjuntas con CN Autoelevadores, quienes se dedican tambien al mantenimiento de camiones, realizamos la reparacion del camion Ford Cargo en domicilio.",
+        "imagen": "./assets/multimedia/colaboraciones/cscn.webp"
+    },
+    {
+        "id": 9,
+        "fecha": "06/03/2026",
+        "categoria": "Operaciones",
+        "vts": "VTS-24 Electrico",
+        "titulo": "Inauguración Sector electronica",
+        "descripcion": "Con la reciente adquisicion de la fuente de energia variable ampliamos nuestra capacidad tecnica y operativa, la cual sumada a otros componentes como el Osciloscopio y Multimetros, podemos banquear circuitos electornicos.",
+        "imagen": "./assets/multimedia/colaboraciones/lab.webp"
+    },
+    {
+        "id": 10,
+        "fecha": "06/03/2026",
+        "categoria": "Operaciones",
+        "vts": "VTS-24 Electrico",
+        "titulo": "Traslado de taller por instalacion electrica de Pala Mecanica Michigan",
+        "descripcion": "Fuimos contactados para llevar a cabo la reparacion electrica de la unidad, la cual luego de una profunda evaluacion de condiciones se decidio realizar un RFP con diagrama nuevo recomendado.",
+        "imagen": "./assets/multimedia/novedades/c45.webp"
     }
 ];
