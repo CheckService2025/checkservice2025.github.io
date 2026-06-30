@@ -92,5 +92,23 @@ const novedadesData = [
         "titulo": "Traslado de taller por instalacion electrica de Pala Mecanica Michigan",
         "descripcion": "Fuimos contactados para llevar a cabo la reparacion electrica de la unidad, la cual luego de una profunda evaluacion de condiciones se decidio realizar un RFP con diagrama nuevo recomendado.",
         "imagen": "./assets/multimedia/novedades/c45.webp"
-    }
+    },
+    {
+        "id": 11,
+        "fecha": "05/2026",
+        "categoria": "Operaciones",
+        "vts": "VTS-00",
+        "titulo": "Cambios estructurales",
+        "descripcion": "Check Service deja de ser una sociedad para pasar a exclusiva y unica direccion de Rivas Lucas, apostando a nuevos horizontes y mejorar infraestructura y calidad de servicios.",
+        "imagen": "./assets/multimedia/novedades/logonew.webp"
+    },
+    {
+        "id": 12,
+        "fecha": "23/06/2026",
+        "categoria": "Operaciones",
+        "vts": "VTS-00",
+        "titulo": "Se llego a la Orden de Trabajo N°100",
+        "descripcion": "Con gran alegria y enormes cambios desde el inicio, Check Service anuncia el proceso de la orden tecnica n°100, con dato particular. La OT N° 2025-0001 era un Chevrolet Astra gris con problemas de ECU. la OT N° 2026-0100 es un Chevrolet Astra Gris con problemas de ECU, casualidades????",
+        "imagen": "./assets/multimedia/novedades/100ot.png"
+     }	
 ];
