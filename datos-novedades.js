@@ -110,5 +110,14 @@ const novedadesData = [
         "titulo": "Se llego a la Orden de Trabajo N°100",
         "descripcion": "Con gran alegria y enormes cambios desde el inicio, Check Service anuncia el proceso de la orden tecnica n°100, con dato particular. La OT N° 2025-0001 era un Chevrolet Astra gris con problemas de ECU. la OT N° 2026-0100 es un Chevrolet Astra Gris con problemas de ECU, casualidades????",
         "imagen": "./assets/multimedia/novedades/100ot.png"
-     }	
+     },
+    {
+        "id": 13,
+        "fecha": "30/06/2026",
+        "categoria": "Linea Pesados",
+        "vts": "VTS-24 Electrico",
+        "titulo": "Traslado de taller",
+        "descripcion": "En tareas conjuntas de operaciones, junto al director de proyectos mi gran amigo Josafat realizamos una instalacion electrica nueva para camion Mercedez Benz 1-11-14, el caballito de batalla de la industria pesada que forjo historia en la industria automotriz nacional.",
+        "imagen": "./assets/multimedia/novedades/11114.png"
+    }	
 ];
