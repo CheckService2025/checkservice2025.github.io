@@ -344,7 +344,7 @@ if (bookingForm) {
         const auto = document.getElementById('b-car').value;
         const servicio = document.getElementById('b-service').value;
 
-        const nroCheckService = "5491151507872"; 
+        const nroCheckService = "5491140867054"; 
 
         const msjHeader = `*SOLICITUD DE TURNO - CHECK SERVICE*%0A`;
         const msjBody = `----------------------------------%0A` +
