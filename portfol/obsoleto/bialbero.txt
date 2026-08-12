@@ -1,0 +1,51 @@
+====================================================================
+               FICHA TÉCNICA Y ESPECIFICACIONES DE DISEÑO
+====================================================================
+
+AERONAVE / PROYECTO: [Nombre de la Aeronave]
+DISEÑO Y INGENIERÍA: Lucas Rivas (Rivas Diseños Aeronáuticos)
+ESTADO DEL PROYECTO: [Ej: Diseño Preliminar / Planos / En Construcción]
+CATEGORÍA: [Ej: Experimental / LSA / Ultraliviano]
+
+--------------------------------------------------------------------
+1. RESUMEN GENERAL
+--------------------------------------------------------------------
+[Escribí acá una breve descripción de la aeronave, su propósito de diseño, características de vuelo pretendidas y filosofía de construcción.]
+
+--------------------------------------------------------------------
+2. ESPECIFICACIONES TÉCNICAS ESTIMADAS
+--------------------------------------------------------------------
+* Envergadura:         [Ej: 7.50 m]
+* Longitud Total:      [Ej: 5.80 m]
+* Superficie Alar:     [Ej: 9.20 m²]
+* Perfil Alar:         [Ej: NACA 4412]
+* Peso Vacío:          [Ej: 280 kg]
+* Peso Máximo (MTOW):  [Ej: 450 kg]
+* Capacidad Combustible: [Ej: 50 L]
+
+--------------------------------------------------------------------
+3. GRUPO MOTOPROPULSOR
+--------------------------------------------------------------------
+* Motor Recomendado:   [Ej: Rotax 912 / Jabiru 2200 / VW Modificado]
+* Potencia:            [Ej: 80 - 100 HP]
+* Hélice:              [Ej: Bipala de paso fijo / Madera o Carbono]
+
+--------------------------------------------------------------------
+4. RENDIMIENTO ESTIMADO (PERFORMANCE)
+--------------------------------------------------------------------
+* Velocidad Máxima (Vne):     [Ej: 130 kt]
+* Velocidad de Crucero (Vc):  [Ej: 95 kt]
+* Velocidad de Pérdida (Vs):  [Ej: 38 kt]
+* Tasa de Ascenso:            [Ej: 700 ft/min]
+* Alcance / Autonomía:        [Ej: 3.5 hs]
+
+--------------------------------------------------------------------
+5. CONSTRUCCIÓN Y MATERIALES
+--------------------------------------------------------------------
+* Estructura:  [Ej: Mixta / Tubos de acero 4130 / Madera / Composite]
+* Revestimiento: [Ej: Entelado / Aluminio 2024-T3]
+* Tren de Aterrizaje: [Ej: Triciclo / Convencional]
+
+====================================================================
+            © Rivas Diseños Aeronáuticos - Registro Técnico
+====================================================================

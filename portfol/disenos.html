@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diseños - Portfolio Lucas Gonzalo Rivas</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Vinculo con el archivo de datos local -->
+    <script src="datos-disenos.js"></script>
+</head>
+<body class="bg-slate-900 text-slate-100 font-sans antialiased min-h-screen flex flex-col justify-between">
+
+    <!-- Navegación -->
+    <nav class="fixed top-0 w-full bg-slate-900/95 backdrop-blur border-b border-slate-800 z-50">
+        <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="text-xl font-bold text-sky-400 tracking-wider">LUCAS GONZALO RIVAS</a>
+            <div class="space-x-6 text-sm font-medium hidden md:flex">
+                <a href="index.html" class="text-slate-400 hover:text-sky-400 transition pb-1">Inicio</a>
+                <a href="proyectos.html" class="text-slate-400 hover:text-sky-400 transition pb-1">Proyectos</a>
+                <a href="disenos.html" class="text-sky-400 font-semibold border-b-2 border-sky-400 pb-1">Diseños</a>
+                <a href="cursos.html" class="text-slate-400 hover:text-sky-400 transition pb-1">Cursos & Capacitaciones</a>
+                <a href="contacto.html" class="text-slate-400 hover:text-sky-400 transition pb-1">Contacto</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Contenido Diseños -->
+    <main class="pt-28 pb-12 px-6 max-w-6xl mx-auto w-full flex-grow">
+        <section class="w-full py-4">
+            <h2 class="text-3xl font-bold text-white mb-2 flex items-center gap-3">
+                <i class="fa-solid fa-compass-drafting text-sky-400"></i> Diseños Aeronáuticos
+            </h2>
+            <p class="text-slate-400 mb-8">Haz clic en cualquier modelo para abrir su ficha y especificaciones técnicas.</p>
+
+            <!-- SUBSECCIÓN: AERONAVES -->
+            <div class="mb-12">
+                <h3 class="text-xl font-bold text-sky-400 mb-6 flex items-center gap-2 border-b border-slate-800 pb-2">
+                    <i class="fa-solid fa-plane"></i> Aeronaves
+                </h3>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                    
+                    <div onclick="mostrarFicha('Axis Woody', 'axis-woody')" class="bg-slate-800/40 border border-slate-700/60 p-5 rounded-xl hover:border-sky-500/50 transition cursor-pointer flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-lg bg-sky-950/60 border border-sky-800 flex items-center justify-center text-sky-400 shrink-0"><i class="fa-solid fa-plane-up"></i></div>
+                        <div><h4 class="font-bold text-white">Axis Woody</h4><span class="text-xs font-mono text-slate-400">Ver Ficha →</span></div>
+                    </div>
+
+                    <div onclick="mostrarFicha('Ben 02', 'ben-02')" class="bg-slate-800/40 border border-slate-700/60 p-5 rounded-xl hover:border-sky-500/50 transition cursor-pointer flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-lg bg-sky-950/60 border border-sky-800 flex items-center justify-center text-sky-400 shrink-0"><i class="fa-solid fa-plane-up"></i></div>
+                        <div><h4 class="font-bold text-white">Ben 02</h4><span class="text-xs font-mono text-slate-400">Ver Ficha →</span></div>
+                    </div>
+
+                    <div onclick="mostrarFicha('Ben T-16', 'ben-t16')" class="bg-slate-800/40 border border-slate-700/60 p-5 rounded-xl hover:border-sky-500/50 transition cursor-pointer flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-lg bg-sky-950/60 border border-sky-800 flex items-center justify-center text-sky-400 shrink-0"><i class="fa-solid fa-plane-up"></i></div>
+                        <div><h4 class="font-bold text-white">Ben T-16</h4><span class="text-xs font-mono text-slate-400">Ver Ficha →</span></div>
+                    </div>
+
+                    <div onclick="mostrarFicha('Ben T-18', 'ben-t18')" class="bg-slate-800/40 border border-slate-700/60 p-5 rounded-xl hover:border-sky-500/50 transition cursor-pointer flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-lg bg-sky-950/60 border border-sky-800 flex items-center justify-center text-sky-400 shrink-0"><i class="fa-solid fa-plane-up"></i></div>
+                        <div><h4 class="font-bold text-white">Ben T-18</h4><span class="text-xs font-mono text-slate-400">Ver Ficha →</span></div>
+                    </div>
+
+                    <div onclick="mostrarFicha('Bialbero', 'bialbero')" class="bg-slate-800/40 border border-slate-700/60 p-5 rounded-xl hover:border-sky-500/50 transition cursor-pointer flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-lg bg-sky-950/60 border border-sky-800 flex items-center justify-center text-sky-400 shrink-0"><i class="fa-solid fa-plane-up"></i></div>
+                        <div><h4 class="font-bold text-white">Bialbero</h4><span class="text-xs font-mono text-slate-400">Ver Ficha →</span></div>
+                    </div>
+
+                    <div onclick="mostrarFicha('Ciara', 'ciara')" class="bg-slate-800/40 border border-slate-700/60 p-5 rounded-xl hover:border-sky-500/50 transition cursor-pointer flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-lg bg-sky-950/60 border border-sky-800 flex items-center justify-center text-sky-400 shrink-0"><i class="fa-solid fa-plane-up"></i></div>
+                        <div><h4 class="font-bold text-white">Ciara</h4><span class="text-xs font-mono text-slate-400">Ver Ficha →</span></div>
+                    </div>
+
+                    <div onclick="mostrarFicha('Jomax Boceratto', 'jomax-boceratto')" class="bg-slate-800/40 border border-slate-700/60 p-5 rounded-xl hover:border-sky-500/50 transition cursor-pointer flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-lg bg-sky-950/60 border border-sky-800 flex items-center justify-center text-sky-400 shrink-0"><i class="fa-solid fa-plane-up"></i></div>
+                        <div><h4 class="font-bold text-white">Jomax Boceratto</h4><span class="text-xs font-mono text-slate-400">Ver Ficha →</span></div>
+                    </div>
+
+                    <div onclick="mostrarFicha('Matheo', 'matheo')" class="bg-slate-800/40 border border-slate-700/60 p-5 rounded-xl hover:border-sky-500/50 transition cursor-pointer flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-lg bg-sky-950/60 border border-sky-800 flex items-center justify-center text-sky-400 shrink-0"><i class="fa-solid fa-plane-up"></i></div>
+                        <div><h4 class="font-bold text-white">Matheo</h4><span class="text-xs font-mono text-slate-400">Ver Ficha →</span></div>
+                    </div>
+
+                    <div onclick="mostrarFicha('R-1024', 'r-1024')" class="bg-slate-800/40 border border-slate-700/60 p-5 rounded-xl hover:border-sky-500/50 transition cursor-pointer flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-lg bg-sky-950/60 border border-sky-800 flex items-center justify-center text-sky-400 shrink-0"><i class="fa-solid fa-plane-up"></i></div>
+                        <div><h4 class="font-bold text-white">R-1024</h4><span class="text-xs font-mono text-slate-400">Ver Ficha →</span></div>
+                    </div>
+
+                    <div onclick="mostrarFicha('SaintBen 1820', 'saintben-1820')" class="bg-slate-800/40 border border-slate-700/60 p-5 rounded-xl hover:border-sky-500/50 transition cursor-pointer flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-lg bg-sky-950/60 border border-sky-800 flex items-center justify-center text-sky-400 shrink-0"><i class="fa-solid fa-plane-up"></i></div>
+                        <div><h4 class="font-bold text-white">SaintBen 1820</h4><span class="text-xs font-mono text-slate-400">Ver Ficha →</span></div>
+                    </div>
+
+                    <div onclick="mostrarFicha('SaintBen Max Evolution Series', 'saintben-max-evolution')" class="bg-slate-800/40 border border-slate-700/60 p-5 rounded-xl hover:border-sky-500/50 transition cursor-pointer flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-lg bg-sky-950/60 border border-sky-800 flex items-center justify-center text-sky-400 shrink-0"><i class="fa-solid fa-plane-up"></i></div>
+                        <div><h4 class="font-bold text-white">SaintBen Max Evolution</h4><span class="text-xs font-mono text-slate-400">Ver Ficha →</span></div>
+                    </div>
+
+                    <div onclick="mostrarFicha('Tacuara', 'tacuara')" class="bg-slate-800/40 border border-slate-700/60 p-5 rounded-xl hover:border-sky-500/50 transition cursor-pointer flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-lg bg-sky-950/60 border border-sky-800 flex items-center justify-center text-sky-400 shrink-0"><i class="fa-solid fa-plane-up"></i></div>
+                        <div><h4 class="font-bold text-white">Tacuara</h4><span class="text-xs font-mono text-slate-400">Ver Ficha →</span></div>
+                    </div>
+
+                    <div onclick="mostrarFicha('X-26', 'x-26')" class="bg-slate-800/40 border border-slate-700/60 p-5 rounded-xl hover:border-sky-500/50 transition cursor-pointer flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-lg bg-sky-950/60 border border-sky-800 flex items-center justify-center text-sky-400 shrink-0"><i class="fa-solid fa-plane-up"></i></div>
+                        <div><h4 class="font-bold text-white">X-26</h4><span class="text-xs font-mono text-slate-400">Ver Ficha →</span></div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- SUBSECCIÓN: SISTEMAS (EN CONSTRUCCIÓN) -->
+            <div>
+                <h3 class="text-xl font-bold text-sky-400 mb-6 flex items-center gap-2 border-b border-slate-800 pb-2">
+                    <i class="fa-solid fa-gears"></i> Sistemas
+                </h3>
+                <div class="bg-slate-800/20 border border-dashed border-slate-700 p-8 rounded-xl text-center">
+                    <i class="fa-solid fa-helmet-safety text-slate-500 text-3xl mb-3"></i>
+                    <h4 class="text-lg font-semibold text-slate-300">En Construcción</h4>
+                    <p class="text-slate-500 text-sm mt-1">Próximamente se detallarán los proyectos y esquemas técnicos de sistemas aeronáuticos.</p>
+                </div>
+            </div>
+
+        </section>
+    </main>
+
+    <!-- VENTANA EMERGENTE (MODAL) -->
+    <div id="modal-descripcion" class="fixed inset-0 bg-slate-950/80 backdrop-blur-sm hidden items-center justify-center z-50 p-4">
+        <div class="bg-slate-800 border border-slate-700 w-full max-w-2xl rounded-2xl p-6 shadow-2xl relative flex flex-col max-h-[80vh]">
+            <div class="flex justify-between items-center border-b border-slate-700 pb-4 mb-4">
+                <h3 id="modal-titulo" class="text-2xl font-bold text-sky-400">---</h3>
+                <button onclick="cerrarModal()" class="text-slate-400 hover:text-white text-xl p-1">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+            <!-- Contenido que lee del objeto JS -->
+            <div id="modal-contenido" class="text-slate-300 overflow-y-auto whitespace-pre-wrap font-mono leading-relaxed text-xs sm:text-sm flex-grow bg-slate-900/50 p-4 rounded-lg border border-slate-700/50">
+            </div>
+            <div class="mt-6 pt-4 border-t border-slate-700 flex justify-end">
+                <button onclick="cerrarModal()" class="bg-slate-700 hover:bg-slate-600 text-white font-semibold px-5 py-2 rounded-lg text-sm transition">Cerrar</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Pie de página -->
+    <footer class="py-6 border-t border-slate-800 text-center text-slate-500 text-xs w-full">
+        © Lucas Rivas. Todos los derechos reservados.
+    </footer>
+
+    <!-- SCRIPT DE INTERACCIÓN -->
+    <script>
+        function mostrarFicha(titulo, claveAeronave) {
+            document.getElementById('modal-titulo').innerText = titulo;
+            
+            // Busca en el objeto que está dentro de datos-disenos.js
+            const texto = typeof fichasAeronaves !== 'undefined' && fichasAeronaves[claveAeronave] 
+                ? fichasAeronaves[claveAeronave] 
+                : 'Ficha técnica en proceso de redacción.';
+
+            document.getElementById('modal-contenido').innerText = texto;
+            document.getElementById('modal-descripcion').classList.remove('hidden');
+            document.getElementById('modal-descripcion').classList.add('flex');
+        }
+
+        function cerrarModal() {
+            document.getElementById('modal-descripcion').classList.add('hidden');
+            document.getElementById('modal-descripcion').classList.remove('flex');
+        }
+    </script>
+
+</body>
+</html>

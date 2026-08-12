@@ -1,0 +1,197 @@
+const fichasProyectos = {
+    // === MUSICALES ===
+    "espacios-en-blanco": `PROYECTO MUSICAL: Espacios en Blanco
+ROL: Baterista
+AÑO: 2010
+
+DETALLES:
+Participación como baterista en la agrupación musical Espacios en Blanco.`,
+
+    "existencias-imperfectas": `PROYECTO MUSICAL: Existencias Imperfectas
+ROL: Baterista (2011 - 2022) / Representante Musical (2022 - Presente)
+AÑO: 2011 - Actualidad
+
+DETALLES:
+Desarrollo e interpretación musical como baterista, sumando posteriormente la gestión ejecutiva, representación y registro de obras del proyecto.`,
+
+    "proyecto-solista": `PROYECTO MUSICAL: Proyecto Solista
+ROL: Compositor / Productor / Músico
+AÑO: 2025
+
+DETALLES:
+Desarrollo de composición, producción y arreglos musicales en etapa solista.`,
+
+    // === INFORMÁTICOS - AERONÁUTICOS ===
+    "generador-ot": `PROYECTO: Generador de Órdenes de Trabajos
+CATEGORÍA: Informática Aeronáutica
+ESTADO: Completado / Funcional
+
+DESCRIPCIÓN:
+Sistema desarrollado para la automatización, emisión y control de Órdenes de Trabajo (OT) en entornos de mantenimiento aeronáutico.`,
+
+    "gerenciamiento-aeronautico": `PROYECTO: Gerenciamiento de Empresa Aeronáutica
+CATEGORÍA: Informática Aeronáutica
+DESCRIPCIÓN: Software integral para la gestión administrativa, técnica y operativa de empresas del sector aeronáutico.`,
+
+    "global-jet-aviation": `PROYECTO: Global Jet Aviation Software
+CATEGORÍA: Informática Aeronáutica
+DESCRIPCIÓN: Sistema de gestión y control para la administración operativa y técnica de flota y hangar.`,
+
+    "mfd-calculadora": `PROYECTO: MFD Calculadora Aeronáutica
+CATEGORÍA: Informática Aeronáutica
+DESCRIPCIÓN: Herramienta de cálculo en pantalla multi-función (MFD) para parámetros de vuelo, rendimiento y física aeronáutica.`,
+
+    "calculo-aerodinamico": `PROYECTO: Software de Cálculo y Diseño Aerodinámico
+CATEGORÍA: Informática Aeronáutica
+DESCRIPCIÓN: Aplicación para el procesamiento numérico y asistencia en el diseño aerodinámico de superficies alares y perfiles.`,
+
+    "gestion-tar": `PROYECTO: Gestión del T.A.R.
+CATEGORÍA: Informática Aeronáutica
+DESCRIPCIÓN: Plataforma de seguimiento y control para Taller de Reparación Aeronáutica.`,
+
+    "sistema-tecnicos-mecanicos": `PROYECTO: Sistema para Técnicos Mecánicos
+CATEGORÍA: Informática Aeronáutica
+DESCRIPCIÓN: Asistente digital y registro de tareas de mantenimiento para personal técnico de hangar.`,
+
+    // === INFORMÁTICOS - ALGORITMOS Y UTILIDADES ===
+    "chord-midi-creator": `PROYECTO: Chord_midi_creator
+CATEGORÍA: Algoritmos y Utilidades
+DESCRIPCIÓN: Algoritmo para la generación automatizada de secuencias de acordes en formato MIDI.`,
+
+    "album-manager": `PROYECTO: Album Manager
+CATEGORÍA: Algoritmos y Utilidades
+DESCRIPCIÓN: Herramienta para la organización, catalogación y gestión metadatos de colecciones musicales.`,
+
+    "centro-mantenimiento-integral": `PROYECTO: Centro de Mantenimiento Integral
+CATEGORÍA: Algoritmos y Utilidades
+DESCRIPCIÓN: Sistema de control y programación de mantenimiento preventivo y correctivo.`,
+
+    // === INFORMÁTICOS - INFORMÁTICA ===
+    "creador-directorios": `PROYECTO: Creador de Directorios
+CATEGORÍA: Herramientas de Informática
+DESCRIPCIÓN: Utilidad para la generación automatizada de estructuras de carpetas en sistemas de archivos.`,
+
+    "listador-directorios": `PROYECTO: Listador de Directorios
+CATEGORÍA: Herramientas de Informática
+DESCRIPCIÓN: Script/Aplicación para exportar y analizar árboles de directorios y archivos.`,
+
+    "editor-bd": `PROYECTO: Editor de Base de Datos
+CATEGORÍA: Herramientas de Informática
+DESCRIPCIÓN: Interfaz gráfica para la administración y edición rápida de registros en bases de datos.`,
+
+    "encriptador": `PROYECTO: Encriptador
+CATEGORÍA: Ciberseguridad / Informática
+DESCRIPCIÓN: Herramienta de codificación y protección de texto y archivos mediante algoritmos criptográficos.`,
+
+    "pyinstaller-manager": `PROYECTO: PyInstaller Manager
+CATEGORÍA: Herramientas de Desarrollo
+DESCRIPCIÓN: Gestor visual para empaquetar y compilar aplicaciones de Python a ejecutables (.exe).`,
+
+    "python-module-manager": `PROYECTO: Python Module Manager
+CATEGORÍA: Herramientas de Desarrollo
+DESCRIPCIÓN: Utilidad para la administración y control de paquetes/módulos en entornos virtuales de Python.`,
+
+    "screensaver-matrix": `PROYECTO: Screensaver Matrix
+CATEGORÍA: Software / Personalización
+DESCRIPCIÓN: Salvapantallas personalizado con efecto de lluvia de código fuente Matrix.`,
+
+    "servicio-tecnico-pc": `PROYECTO: Servicio Técnico PC
+CATEGORÍA: Informática
+DESCRIPCIÓN: Sistema de diagnóstico, registro de equipos y gestión de clientes de servicio técnico informático.`,
+
+    "sistema-operativo": `PROYECTO: Sistema Operativo
+CATEGORÍA: Informática / Desarrollo
+DESCRIPCIÓN: Proyecto experimental de entorno de sistema / shell interactivo.`,
+
+    // === INFORMÁTICOS - MULTIMEDIA ===
+    "add-image-mp3": `PROYECTO: Add Image to MP3
+CATEGORÍA: Multimedia
+DESCRIPCIÓN: Utilidad para la inyección de portadas e imágenes dentro de la etiqueta ID3 de archivos de audio MP3.`,
+
+    "multimedia-converter": `PROYECTO: Multimedia Converter
+CATEGORÍA: Multimedia
+DESCRIPCIÓN: Conversor multiformato para procesamiento de audio y video.`,
+
+    "image-optimizer-ultra": `PROYECTO: Image Optimizer ULTRA
+CATEGORÍA: Multimedia
+DESCRIPCIÓN: Algoritmo de compresión y optimización de imágenes manteniendo la calidad visual.`,
+
+    "ico-converter": `PROYECTO: ICO Converter
+CATEGORÍA: Multimedia
+DESCRIPCIÓN: Herramienta para conversión de imágenes PNG/JPG a archivos de icono ICO.`,
+
+    // === INFORMÁTICOS - PERSONALES ===
+    "agenda-eventos": `PROYECTO: Agenda, Control de Turnos y Eventos
+CATEGORÍA: Software Personal
+DESCRIPCIÓN: Aplicación para la gestión de calendarios, recordatorios y turnos.`,
+
+    "control-medico": `PROYECTO: Control Médico Personal
+CATEGORÍA: Software Personal
+DESCRIPCIÓN: Registro y seguimiento de historias clínicas, turnos e indicadores médicos personales.`,
+
+    "extree": `PROYECTO: ExTree
+CATEGORÍA: Software / Utilidades
+DESCRIPCIÓN: Visualizador y explorador jerárquico de estructuras de datos.`,
+
+    "gestor-capacitaciones": `PROYECTO: Gestor de Capacitaciones
+CATEGORÍA: Software Personal
+DESCRIPCIÓN: Control y seguimiento de cursos, horas lectivas y certificados obtenidos.`,
+
+    "gestor-pagos": `PROYECTO: Gestor de Pagos
+CATEGORÍA: Software Personal / Finanzas
+DESCRIPCIÓN: Control de finanzas personales, servicios, vencimientos y flujos de caja.`,
+
+    "gestor-tareas": `PROYECTO: Gestor de Tareas
+CATEGORÍA: Software Personal
+DESCRIPCIÓN: Aplicación To-Do para la organización y jerarquización de actividades diarias.`,
+
+    "global-maps-system": `PROYECTO: Global Maps System
+CATEGORÍA: Software / Geolocalización
+DESCRIPCIÓN: Integración de mapas e información geográfica para localización de puntos de interés.`,
+
+    "password-manager": `PROYECTO: Password Manager
+CATEGORÍA: Ciberseguridad / Personal
+DESCRIPCIÓN: Bóveda cifrada para el almacenamiento seguro de credenciales de acceso.`,
+
+    "gestion-cursos": `PROYECTO: Sistema Técnico de Gestión de Cursos y Capacitaciones
+CATEGORÍA: Software / Educación
+DESCRIPCIÓN: Plataforma de administración de planes de estudio y avance académico.`,
+
+    "visor-conversaciones": `PROYECTO: Visor de Conversaciones
+CATEGORÍA: Utilidades
+DESCRIPCIÓN: Herramienta para la lectura y formateo de historiales de chats y mensajes.`,
+
+    "genealogia": `PROYECTO: Genealogía
+CATEGORÍA: Software Personal
+DESCRIPCIÓN: Base de datos y diagrama de árbol genealógico familiar.`,
+
+    "prada-autoelevadores": `PROYECTO: Sistema de Gestión Prada Autoelevadores
+CATEGORÍA: Software de Gestión
+DESCRIPCIÓN: Sistema a medida para el control operativo, clientes y alquiler/mantenimiento de autoelevadores.`,
+
+    // === INFORMÁTICOS - TÉCNICOS ===
+    "gestion-dev-software": `PROYECTO: Gestión de Proyectos de Desarrollo de Software
+CATEGORÍA: Sistemas Técnicos
+DESCRIPCIÓN: Herramienta de seguimiento de sprints, requerimientos y entregables de desarrollo.`,
+
+    "gestion-integral-empresas": `PROYECTO: Software de Gestión Integral de Empresas
+CATEGORÍA: ERP / Sistemas
+DESCRIPCIÓN: Plataforma empresarial modular para contabilidad, stock, ventas y personal.`,
+
+    "workout": `PROYECTO: WorkOut
+CATEGORÍA: Software / Salud
+DESCRIPCIÓN: Aplicación de planificación y registro de rutinas de entrenamiento y rendimiento físico.`,
+
+    // === INFORMÁTICOS - VEHICULAR ===
+    "checklistpro": `PROYECTO: CheckListPro
+CATEGORÍA: Software Vehicular
+DESCRIPCIÓN: Sistema de listas de chequeo preventivas para inspección de vehículos y maquinaria.`,
+
+    "ftr": `PROYECTO: FTR
+CATEGORÍA: Software Vehicular
+DESCRIPCIÓN: Módulo técnico de registro de fallas, tiempos y reparaciones vehiculares.`,
+
+    "gestion-taller": `PROYECTO: Gestión Integral del Taller
+CATEGORÍA: Software Vehicular
+DESCRIPCIÓN: Software administrativo y operativo para la recepción de vehículos, presupuestos y mano de obra.`,
+};

@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyectos - Portfolio Lucas Gonzalo Rivas</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Vinculo con las fichas de proyectos -->
+    <script src="datos-proyectos.js"></script>
+</head>
+<body class="bg-slate-900 text-slate-100 font-sans antialiased min-h-screen flex flex-col justify-between">
+
+    <!-- Navegación -->
+    <nav class="fixed top-0 w-full bg-slate-900/95 backdrop-blur border-b border-slate-800 z-50">
+        <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="text-xl font-bold text-sky-400 tracking-wider">LUCAS GONZALO RIVAS</a>
+            <div class="space-x-6 text-sm font-medium hidden md:flex">
+                <a href="index.html" class="text-slate-400 hover:text-sky-400 transition pb-1">Inicio</a>
+                <a href="proyectos.html" class="text-sky-400 font-semibold border-b-2 border-sky-400 pb-1">Proyectos</a>
+                <a href="disenos.html" class="text-slate-400 hover:text-sky-400 transition pb-1">Diseños</a>
+                <a href="cursos.html" class="text-slate-400 hover:text-sky-400 transition pb-1">Cursos & Capacitaciones</a>
+                <a href="contacto.html" class="text-slate-400 hover:text-sky-400 transition pb-1">Contacto</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Contenido Principal -->
+    <main class="pt-28 pb-12 px-6 max-w-6xl mx-auto w-full flex-grow">
+        <section class="w-full py-4">
+            <h2 class="text-3xl font-bold text-white mb-2 flex items-center gap-3">
+                <i class="fa-solid fa-code text-sky-400"></i> Mis Proyectos
+            </h2>
+            <p class="text-slate-400 mb-8">Trayectoria musical y desarrollos de software ordenados por especialidad.</p>
+
+            <!-- ================= SECCIÓN 1: MUSICALES ================= -->
+            <div class="mb-12">
+                <h3 class="text-2xl font-bold text-sky-400 mb-6 flex items-center gap-2 border-b border-slate-800 pb-2">
+                    <i class="fa-solid fa-drum"></i> Proyectos Musicales
+                </h3>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                    
+                    <div onclick="mostrarFicha('Espacios en Blanco', 'espacios-en-blanco')" class="bg-slate-800/40 border border-slate-700/60 p-5 rounded-xl hover:border-sky-500/50 transition cursor-pointer flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-lg bg-sky-950/60 border border-sky-800 flex items-center justify-center text-sky-400 shrink-0"><i class="fa-solid fa-music"></i></div>
+                        <div>
+                            <h4 class="font-bold text-white">Espacios en Blanco</h4>
+                            <span class="text-xs font-mono text-slate-400">2010 • Baterista</span>
+                        </div>
+                    </div>
+
+                    <div onclick="mostrarFicha('Existencias Imperfectas', 'existencias-imperfectas')" class="bg-slate-800/40 border border-slate-700/60 p-5 rounded-xl hover:border-sky-500/50 transition cursor-pointer flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-lg bg-sky-950/60 border border-sky-800 flex items-center justify-center text-sky-400 shrink-0"><i class="fa-solid fa-record-vinyl"></i></div>
+                        <div>
+                            <h4 class="font-bold text-white">Existencias Imperfectas</h4>
+                            <span class="text-xs font-mono text-slate-400">2011 - Pres. • Baterista / Mánager</span>
+                        </div>
+                    </div>
+
+                    <div onclick="mostrarFicha('Proyecto Solista', 'proyecto-solista')" class="bg-slate-800/40 border border-slate-700/60 p-5 rounded-xl hover:border-sky-500/50 transition cursor-pointer flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-lg bg-sky-950/60 border border-sky-800 flex items-center justify-center text-sky-400 shrink-0"><i class="fa-solid fa-guitar"></i></div>
+                        <div>
+                            <h4 class="font-bold text-white">Proyecto Solista</h4>
+                            <span class="text-xs font-mono text-slate-400">2025 • Compositor</span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- ================= SECCIÓN 2: INFORMÁTICOS ================= -->
+            <div class="mb-8">
+                <h3 class="text-2xl font-bold text-sky-400 mb-6 flex items-center gap-2 border-b border-slate-800 pb-2">
+                    <i class="fa-solid fa-laptop-code"></i> Proyectos Informáticos
+                </h3>
+
+                <!-- Subcategoría: Aeronáuticos -->
+                <div class="mb-8">
+                    <h4 class="text-lg font-bold text-slate-300 mb-4 flex items-center gap-2">
+                        <i class="fa-solid fa-plane text-sky-400"></i> Aeronáuticos
+                    </h4>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+                        <div onclick="mostrarFicha('Generador de Órdenes de Trabajos', 'generador-ot')" class="bg-slate-800/40 border border-slate-700/60 p-4 rounded-xl hover:border-sky-500/50 transition cursor-pointer"><h5 class="font-bold text-white text-sm">Generador de Órdenes de Trabajos</h5></div>
+                        <div onclick="mostrarFicha('Gerenciamiento de Empresa Aeronáutica', 'gerenciamiento-aeronautico')" class="bg-slate-800/40 border border-slate-700/60 p-4 rounded-xl hover:border-sky-500/50 transition cursor-pointer"><h5 class="font-bold text-white text-sm">Gerenciamiento de Empresa Aeronáutica</h5></div>
+                        <div onclick="mostrarFicha('Global Jet Aviation Software', 'global-jet-aviation')" class="bg-slate-800/40 border border-slate-700/60 p-4 rounded-xl hover:border-sky-500/50 transition cursor-pointer"><h5 class="font-bold text-white text-sm">Global Jet Aviation Software</h5></div>
+                        <div onclick="mostrarFicha('MFD Calculadora Aeronáutica', 'mfd-calculadora')" class="bg-slate-800/40 border border-slate-700/60 p-4 rounded-xl hover:border-sky-500/50 transition cursor-pointer"><h5 class="font-bold text-white text-sm">MFD Calculadora Aeronáutica</h5></div>
+                        <div onclick="mostrarFicha('Software de Cálculo y Diseño Aerodinámico', 'calculo-aerodinamico')" class="bg-slate-800/40 border border-slate-700/60 p-4 rounded-xl hover:border-sky-500/50 transition cursor-pointer"><h5 class="font-bold text-white text-sm">Software de Cálculo y Diseño Aerodinámico</h5></div>
+                        <div onclick="mostrarFicha('Gestión del T.A.R.', 'gestion-tar')" class="bg-slate-800/40 border border-slate-700/60 p-4 rounded-xl hover:border-sky-500/50 transition cursor-pointer"><h5 class="font-bold text-white text-sm">Gestión del T.A.R.</h5></div>
+                        <div onclick="mostrarFicha('Sistema para Técnicos Mecánicos', 'sistema-tecnicos-mecanicos')" class="bg-slate-800/40 border border-slate-700/60 p-4 rounded-xl hover:border-sky-500/50 transition cursor-pointer"><h5 class="font-bold text-white text-sm">Sistema para Técnicos Mecánicos</h5></div>
+                    </div>
+                </div>
+
+                <!-- Subcategoría: Algoritmos y Utilidades -->
+                <div class="mb-8">
+                    <h4 class="text-lg font-bold text-slate-300 mb-4 flex items-center gap-2">
+                        <i class="fa-solid fa-square-root-variable text-sky-400"></i> Algoritmos y Utilidades
+                    </h4>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+                        <div onclick="mostrarFicha('Chord_midi_creator', 'chord-midi-creator')" class="bg-slate-800/40 border border-slate-700/60 p-4 rounded-xl hover:border-sky-500/50 transition cursor-pointer"><h5 class="font-bold text-white text-sm">Chord_midi_creator</h5></div>
+                        <div onclick="mostrarFicha('Album Manager', 'album-manager')" class="bg-slate-800/40 border border-slate-700/60 p-4 rounded-xl hover:border-sky-500/50 transition cursor-pointer"><h5 class="font-bold text-white text-sm">Album Manager</h5></div>
+                        <div onclick="mostrarFicha('Centro de Mantenimiento Integral', 'centro-mantenimiento-integral')" class="bg-slate-800/40 border border-slate-700/60 p-4 rounded-xl hover:border-sky-500/50 transition cursor-pointer"><h5 class="font-bold text-white text-sm">Centro de Mantenimiento Integral</h5></div>
+                    </div>
+                </div>
+
+                <!-- Subcategoría: Informática -->
+                <div class="mb-8">
+                    <h4 class="text-lg font-bold text-slate-300 mb-4 flex items-center gap-2">
+                        <i class="fa-solid fa-terminal text-sky-400"></i> Herramientas de Informática
+                    </h4>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+                        <div onclick="mostrarFicha('Creador de Directorios', 'creador-directorios')" class="bg-slate-800/40 border border-slate-700/60 p-4 rounded-xl hover:border-sky-500/50 transition cursor-pointer"><h5 class="font-bold text-white text-sm">Creador de Directorios</h5></div>
+                        <div onclick="mostrarFicha('Listador de Directorios', 'listador-directorios')" class="bg-slate-800/40 border border-slate-700/60 p-4 rounded-xl hover:border-sky-500/50 transition cursor-pointer"><h5 class="font-bold text-white text-sm">Listador de Directorios</h5></div>
+                        <div onclick="mostrarFicha('Editor de Base de Datos', 'editor-bd')" class="bg-slate-800/40 border border-slate-700/60 p-4 rounded-xl hover:border-sky-500/50 transition cursor-pointer"><h5 class="font-bold text-white text-sm">Editor de Base de Datos</h5></div>
+                        <div onclick="mostrarFicha('Encriptador', 'encriptador')" class="bg-slate-800/40 border border-slate-700/60 p-4 rounded-xl hover:border-sky-500/50 transition cursor-pointer"><h5 class="font-bold text-white text-sm">Encriptador</h5></div>
+                        <div onclick="mostrarFicha('PyInstaller Manager', 'pyinstaller-manager')" class="bg-slate-800/40 border border-slate-700/60 p-4 rounded-xl hover:border-sky-500/50 transition cursor-pointer"><h5 class="font-bold text-white text-sm">PyInstaller Manager</h5></div>
+                        <div onclick="mostrarFicha('Python Module Manager', 'python-module-manager')" class="bg-slate-800/40 border border-slate-700/60 p-4 rounded-xl hover:border-sky-500/50 transition cursor-pointer"><h5 class="font-bold text-white text-sm">Python Module Manager</h5></div>
+                        <div onclick="mostrarFicha('Screensaver Matrix', 'screensaver-matrix')" class="bg-slate-800/40 border border-slate-700/60 p-4 rounded-xl hover:border-sky-500/50 transition cursor-pointer"><h5 class="font-bold text-white text-sm">Screensaver Matrix</h5></div>
+                        <div onclick="mostrarFicha('Servicio Técnico PC', 'servicio-tecnico-pc')" class="bg-slate-800/40 border border-slate-700/60 p-4 rounded-xl hover:border-sky-500/50 transition cursor-pointer"><h5 class="font-bold text-white text-sm">Servicio Técnico PC</h5></div>
+                        <div onclick="mostrarFicha('Sistema Operativo', 'sistema-operativo')" class="bg-slate-800/40 border border-slate-700/60 p-4 rounded-xl hover:border-sky-500/50 transition cursor-pointer"><h5 class="font-bold text-white text-sm">Sistema Operativo</h5></div>
+                    </div>
+                </div>
+
+                <!-- Subcategoría: Multimedia -->
+                <div class="mb-8">
+                    <h4 class="text-lg font-bold text-slate-300 mb-4 flex items-center gap-2">
+                        <i class="fa-solid fa-[#00a8ff] fa-photo-film text-sky-400"></i> Multimedia
+                    </h4>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
+                        <div onclick="mostrarFicha('Add Image to MP3', 'add-image-mp3')" class="bg-slate-800/40 border border-slate-700/60 p-4 rounded-xl hover:border-sky-500/50 transition cursor-pointer"><h5 class="font-bold text-white text-sm">Add Image to MP3</h5></div>
+                        <div onclick="mostrarFicha('Multimedia Converter', 'multimedia-converter')" class="bg-slate-800/40 border border-slate-700/60 p-4 rounded-xl hover:border-sky-500/50 transition cursor-pointer"><h5 class="font-bold text-white text-sm">Multimedia Converter</h5></div>
+                        <div onclick="mostrarFicha('Image Optimizer ULTRA', 'image-optimizer-ultra')" class="bg-slate-800/40 border border-slate-700/60 p-4 rounded-xl hover:border-sky-500/50 transition cursor-pointer"><h5 class="font-bold text-white text-sm">Image Optimizer ULTRA</h5></div>
+                        <div onclick="mostrarFicha('ICO Converter', 'ico-converter')" class="bg-slate-800/40 border border-slate-700/60 p-4 rounded-xl hover:border-sky-500/50 transition cursor-pointer"><h5 class="font-bold text-white text-sm">ICO Converter</h5></div>
+                    </div>
+                </div>
+
+                <!-- Subcategoría: Personales -->
+                <div class="mb-8">
+                    <h4 class="text-lg font-bold text-slate-300 mb-4 flex items-center gap-2">
+                        <i class="fa-solid fa-user-gear text-sky-400"></i> Proyectos Personales
+                    </h4>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+                        <div onclick="mostrarFicha('Agenda, Control de Turnos y Eventos', 'agenda-eventos')" class="bg-slate-800/40 border border-slate-700/60 p-4 rounded-xl hover:border-sky-500/50 transition cursor-pointer"><h5 class="font-bold text-white text-sm">Agenda, Control de Turnos y Eventos</h5></div>
+                        <div onclick="mostrarFicha('Control Médico Personal', 'control-medico')" class="bg-slate-800/40 border border-slate-700/60 p-4 rounded-xl hover:border-sky-500/50 transition cursor-pointer"><h5 class="font-bold text-white text-sm">Control Médico Personal</h5></div>
+                        <div onclick="mostrarFicha('ExTree', 'extree')" class="bg-slate-800/40 border border-slate-700/60 p-4 rounded-xl hover:border-sky-500/50 transition cursor-pointer"><h5 class="font-bold text-white text-sm">ExTree</h5></div>
+                        <div onclick="mostrarFicha('Gestor de Capacitaciones', 'gestor-capacitaciones')" class="bg-slate-800/40 border border-slate-700/60 p-4 rounded-xl hover:border-sky-500/50 transition cursor-pointer"><h5 class="font-bold text-white text-sm">Gestor de Capacitaciones</h5></div>
+                        <div onclick="mostrarFicha('Gestor de Pagos', 'gestor-pagos')" class="bg-slate-800/40 border border-slate-700/60 p-4 rounded-xl hover:border-sky-500/50 transition cursor-pointer"><h5 class="font-bold text-white text-sm">Gestor de Pagos</h5></div>
+                        <div onclick="mostrarFicha('Gestor de Tareas', 'gestor-tareas')" class="bg-slate-800/40 border border-slate-700/60 p-4 rounded-xl hover:border-sky-500/50 transition cursor-pointer"><h5 class="font-bold text-white text-sm">Gestor de Tareas</h5></div>
+                        <div onclick="mostrarFicha('Global Maps System', 'global-maps-system')" class="bg-slate-800/40 border border-slate-700/60 p-4 rounded-xl hover:border-sky-500/50 transition cursor-pointer"><h5 class="font-bold text-white text-sm">Global Maps System</h5></div>
+                        <div onclick="mostrarFicha('Password Manager', 'password-manager')" class="bg-slate-800/40 border border-slate-700/60 p-4 rounded-xl hover:border-sky-500/50 transition cursor-pointer"><h5 class="font-bold text-white text-sm">Password Manager</h5></div>
+                        <div onclick="mostrarFicha('Sistema Técnico de Gestión de Cursos', 'gestion-cursos')" class="bg-slate-800/40 border border-slate-700/60 p-4 rounded-xl hover:border-sky-500/50 transition cursor-pointer"><h5 class="font-bold text-white text-sm">Gestión Técnico de Cursos</h5></div>
+                        <div onclick="mostrarFicha('Visor de Conversaciones', 'visor-conversaciones')" class="bg-slate-800/40 border border-slate-700/60 p-4 rounded-xl hover:border-sky-500/50 transition cursor-pointer"><h5 class="font-bold text-white text-sm">Visor de Conversaciones</h5></div>
+                        <div onclick="mostrarFicha('Genealogía', 'genealogia')" class="bg-slate-800/40 border border-slate-700/60 p-4 rounded-xl hover:border-sky-500/50 transition cursor-pointer"><h5 class="font-bold text-white text-sm">Genealogía</h5></div>
+                        <div onclick="mostrarFicha('Sistema de Gestión Prada Autoelevadores', 'prada-autoelevadores')" class="bg-slate-800/40 border border-slate-700/60 p-4 rounded-xl hover:border-sky-500/50 transition cursor-pointer"><h5 class="font-bold text-white text-sm">Prada Autoelevadores</h5></div>
+                    </div>
+                </div>
+
+                <!-- Subcategoría: Técnicos -->
+                <div class="mb-8">
+                    <h4 class="text-lg font-bold text-slate-300 mb-4 flex items-center gap-2">
+                        <i class="fa-solid fa-list-check text-sky-400"></i> Sistemas Técnicos
+                    </h4>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+                        <div onclick="mostrarFicha('Gestión de Proyectos de Desarrollo', 'gestion-dev-software')" class="bg-slate-800/40 border border-slate-700/60 p-4 rounded-xl hover:border-sky-500/50 transition cursor-pointer"><h5 class="font-bold text-white text-sm">Gestión Proyectos Software</h5></div>
+                        <div onclick="mostrarFicha('Software de Gestión Integral de Empresas', 'gestion-integral-empresas')" class="bg-slate-800/40 border border-slate-700/60 p-4 rounded-xl hover:border-sky-500/50 transition cursor-pointer"><h5 class="font-bold text-white text-sm">Gestión Integral Empresas</h5></div>
+                        <div onclick="mostrarFicha('WorkOut', 'workout')" class="bg-slate-800/40 border border-slate-700/60 p-4 rounded-xl hover:border-sky-500/50 transition cursor-pointer"><h5 class="font-bold text-white text-sm">WorkOut</h5></div>
+                    </div>
+                </div>
+
+                <!-- Subcategoría: Vehicular -->
+                <div class="mb-8">
+                    <h4 class="text-lg font-bold text-slate-300 mb-4 flex items-center gap-2">
+                        <i class="fa-solid fa-car-side text-sky-400"></i> Vehicular
+                    </h4>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+                        <div onclick="mostrarFicha('CheckListPro', 'checklistpro')" class="bg-slate-800/40 border border-slate-700/60 p-4 rounded-xl hover:border-sky-500/50 transition cursor-pointer"><h5 class="font-bold text-white text-sm">CheckListPro</h5></div>
+                        <div onclick="mostrarFicha('FTR', 'ftr')" class="bg-slate-800/40 border border-slate-700/60 p-4 rounded-xl hover:border-sky-500/50 transition cursor-pointer"><h5 class="font-bold text-white text-sm">FTR</h5></div>
+                        <div onclick="mostrarFicha('Gestión Integral del Taller', 'gestion-taller')" class="bg-slate-800/40 border border-slate-700/60 p-4 rounded-xl hover:border-sky-500/50 transition cursor-pointer"><h5 class="font-bold text-white text-sm">Gestión Integral del Taller</h5></div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <!-- VENTANA EMERGENTE (MODAL) -->
+    <div id="modal-descripcion" class="fixed inset-0 bg-slate-950/80 backdrop-blur-sm hidden items-center justify-center z-50 p-4">
+        <div class="bg-slate-800 border border-slate-700 w-full max-w-2xl rounded-2xl p-6 shadow-2xl relative flex flex-col max-h-[80vh]">
+            <div class="flex justify-between items-center border-b border-slate-700 pb-4 mb-4">
+                <h3 id="modal-titulo" class="text-2xl font-bold text-sky-400">---</h3>
+                <button onclick="cerrarModal()" class="text-slate-400 hover:text-white text-xl p-1">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+            <div id="modal-contenido" class="text-slate-300 overflow-y-auto whitespace-pre-wrap font-sans leading-relaxed text-sm flex-grow bg-slate-900/50 p-4 rounded-lg border border-slate-700/50">
+            </div>
+            <div class="mt-6 pt-4 border-t border-slate-700 flex justify-end">
+                <button onclick="cerrarModal()" class="bg-slate-700 hover:bg-slate-600 text-white font-semibold px-5 py-2 rounded-lg text-sm transition">Cerrar</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Pie de página -->
+    <footer class="py-6 border-t border-slate-800 text-center text-slate-500 text-xs w-full">
+        © Lucas Rivas. Todos los derechos reservados.
+    </footer>
+
+    <!-- SCRIPT DE INTERACCIÓN -->
+    <script>
+        function mostrarFicha(titulo, claveProyecto) {
+            document.getElementById('modal-titulo').innerText = titulo;
+            
+            const texto = typeof fichasProyectos !== 'undefined' && fichasProyectos[claveProyecto] 
+                ? fichasProyectos[claveProyecto] 
+                : 'Detalles del proyecto en proceso de redacción.';
+
+            document.getElementById('modal-contenido').innerText = texto;
+            document.getElementById('modal-descripcion').classList.remove('hidden');
+            document.getElementById('modal-descripcion').classList.add('flex');
+        }
+
+        function cerrarModal() {
+            document.getElementById('modal-descripcion').classList.add('hidden');
+            document.getElementById('modal-descripcion').classList.remove('flex');
+        }
+    </script>
+
+</body>
+</html>

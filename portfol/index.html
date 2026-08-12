@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio - Portfolio Lucas Gonzalo Gonzalo Rivas</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-slate-900 text-slate-100 font-sans antialiased min-h-screen flex flex-col justify-between">
+
+    <!-- Navegación -->
+    <nav class="fixed top-0 w-full bg-slate-900/95 backdrop-blur border-b border-slate-800 z-50">
+        <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="text-xl font-bold text-sky-400 tracking-wider">LUCAS GONZALO RIVAS</a>
+            <div class="space-x-6 text-sm font-medium hidden md:flex">
+                <a href="index.html" class="text-sky-400 font-semibold border-b-2 border-sky-400 pb-1">Inicio</a>
+                <a href="proyectos.html" class="text-slate-400 hover:text-sky-400 transition pb-1">Proyectos</a>
+                <a href="disenos.html" class="text-slate-400 hover:text-sky-400 transition pb-1">Diseños</a>
+                <a href="cursos.html" class="text-slate-400 hover:text-sky-400 transition pb-1">Cursos & Capacitaciones</a>
+                <a href="contacto.html" class="text-slate-400 hover:text-sky-400 transition pb-1">Contacto</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Contenido Inicio con Foto a la Derecha -->
+    <main class="pt-28 pb-12 px-6 max-w-6xl mx-auto w-full flex-grow flex items-center justify-center">
+        <section class="w-full py-8 grid grid-cols-1 md:grid-cols-12 gap-10 items-center">
+            
+            <!-- Columna Izquierda: Texto -->
+            <div class="md:col-span-7">
+                <span class="text-sky-400 font-mono text-sm mb-2 block">> Hola, mi nombre es</span>
+                <h1 class="text-4xl md:text-6xl font-bold text-white mb-4">Lucas Gonzalo Rivas.</h1>
+                <h2 class="text-2xl md:text-3xl font-semibold text-slate-400 mb-6">Desarrollo de Software, Aeronáutica e Ingeniería.</h2>
+                <p class="text-slate-400 text-base md:text-lg mb-8 leading-relaxed">
+                    Técnico especializado con amplia trayectoria en el sector aeronáutico y electromecánico, reconvertido en desarrollador de software. Combino la precisión técnica de la ingeniería con la innovación digital en Python, JavaScript, bases de datos y soluciones CAD.
+                </p>
+                <div class="flex flex-wrap gap-4">
+                    <a href="proyectos.html" class="bg-sky-500 hover:bg-sky-600 text-slate-900 font-bold px-6 py-3 rounded-lg transition shadow-lg shadow-sky-500/20">Ver Proyectos</a>
+                    <a href="contacto.html" class="border border-sky-400 text-sky-400 hover:bg-sky-400/10 font-bold px-6 py-3 rounded-lg transition">Contacto</a>
+                </div>
+            </div>
+
+            <!-- Columna Derecha: Foto -->
+            <div class="md:col-span-5 flex justify-center items-center">
+                <div class="relative group w-full max-w-sm">
+                    <!-- Resplandor sutil celeste tras la foto -->
+                    <div class="absolute -inset-1 bg-gradient-to-r from-sky-500 to-blue-600 rounded-2xl blur opacity-30 group-hover:opacity-7 shadow-xl transition duration-500"></div>
+                    
+                    <!-- Marco e Imagen -->
+                    <div class="relative bg-slate-800 rounded-2xl p-2 border border-slate-700/80 overflow-hidden shadow-2xl">
+                        <img 
+                            src="foto-perfil.jpg" 
+                            alt="Foto de perfil de Lucas Rivas" 
+                            class="w-full h-auto object-cover rounded-xl border border-slate-700/50 grayscale hover:grayscale-0 transition duration-500"
+                        />
+                    </div>
+                </div>
+            </div>
+
+        </section>
+    </main>
+
+    <!-- Pie de página -->
+    <footer class="py-6 border-t border-slate-800 text-center text-slate-500 text-xs w-full">
+        © Lucas Rivas. Todos los derechos reservados.
+    </footer>
+
+</body>
+</html>
